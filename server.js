@@ -5,8 +5,7 @@ const app = express();
 app.use(express.static(__dirname + '/dist'));
 // Start the app by listening on the default
 // Heroku port
-const express = require('express');
-const app = express();
+
 // If an incoming request uses
 // a protocol other than HTTPS,
 // redirect that request to the
