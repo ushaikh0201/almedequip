@@ -1,0 +1,17 @@
+.home-blog-post .text .intro  {
+    min-height: 130px !important;
+}
+
+.bar {
+    padding: 20px 0 !important;
+}
+
+.testimonial .icon .fa-quote-left{
+    font-size: medium !important;
+}
+
+.video #accordion .card-body{
+    overflow-y: scroll;
+    height: 350px !important;
+} 
+
