@@ -78,7 +78,7 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-12">
-        
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -386,6 +386,53 @@
             <h3>Do you want cool website like this one?</h3>
         </div>
         <div class="col-lg-4 text-center p-3">   <a href="#" class="btn btn-template-outlined-white">Buy this template now</a></div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Button trigger modal-->
+<button class="btn btn-primary" (click)="lgModal.show()">Large modal</button>
+
+<!--Modal: modalVM-->
+<div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="dialog-sizes-name1">
+    <div class="modal-dialog modal-lg">
+        <!--Body-->
+        <div class="modal-body mb-0 p-0">
+            <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/115098447" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!--Footer-->
+        <div class="modal-footer justify-content-center flex-column flex-md-row">
+            <div class="row">
+                <div class="col-4 col-md-4">
+                    <span class="mr-4">Spread the word!</span>
+                </div>
+                <div class="col-4 col-md-4">
+                    <a type="button" class="btn-floating btn-sm btn-fb">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <!--Twitter-->
+                    <a type="button" class="btn-floating btn-sm btn-tw">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <!--Google +-->
+                    <a type="button" class="btn-floating btn-sm btn-gplus">
+                        <i class="fa fa-google-plus"></i>
+                    </a>
+                    <!--Linkedin-->
+                    <a type="button" class="btn-floating btn-sm btn-ins">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                </div>
+                <div class="col-4 col-md-4">
+                    <a type="button" style="cursor:pointer" class="btn-floating btn-sm btn-ins pull-right" (click)="modalRef.hide()">
+                        <span aria-hidden="true">&times;</span>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
