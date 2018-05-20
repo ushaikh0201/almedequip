@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+// Import generated components
 import { AppComponent } from './app.component';
 import { AppHeaderComponent } from './app-header/app-header.component';
 import { AppFooterComponent } from './app-footer/app-footer.component';
@@ -12,24 +12,21 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 
-import { ModalModule } from 'ngx-bootstrap/modal';
+// Import your library
+import { OwlModule } from 'ngx-owl-carousel';
+import { FullLayoutComponent } from './full-layout/full-layout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AppHeaderComponent,
     AppFooterComponent,
-    DashboardComponent,
-    ProductComponent,
-    ServiceComponent,
-    AboutUsComponent,
-    ContactUsComponent,
-    PortfolioComponent,
+    FullLayoutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ModalModule.forRoot()
+    OwlModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

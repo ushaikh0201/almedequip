@@ -43,7 +43,7 @@ Author:         HTMLMATE Team
         }
     }
     jQuery(document).ready(function () {
-        vidco.init();
+        //vidco.init();
     });
 
 })();
