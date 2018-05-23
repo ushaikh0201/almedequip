@@ -44,6 +44,7 @@ Author:         HTMLMATE Team
     }
     jQuery(document).ready(function () {
         //vidco.init();
+        jQuery('.dropdown-toggle').dropdown();
     });
 
 })();

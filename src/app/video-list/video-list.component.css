@@ -1,0 +1,10 @@
+.video-list{
+    overflow-y: scroll;
+    height: 245px !important;
+}
+.video-list .image{
+    margin-right:5px;
+}
+.video-list h4 a{
+    font-size: 14px;
+}

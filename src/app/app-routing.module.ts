@@ -7,6 +7,13 @@ import { ServiceComponent } from './service/service.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { SupportComponent } from './support/support.component';
+import { FaqComponent } from './faq/faq.component';
+import { NewsComponent } from './news/news.component';
+import { EventsComponent } from './events/events.component';
+import { OfferComponent } from './offer/offer.component';
+import { BlogComponent } from './blog/blog.component';
+import { CampaignComponent } from './campaign/campaign.component';
 
 // const routes: Routes = [
 //   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -25,13 +32,14 @@ const appRoutes: Routes = [
       { path: 'contact-us', component: ContactUsComponent },
       { path: 'products', component: ProductComponent },
       { path: 'services', component: ServiceComponent },
-      { path: 'support', component: DashboardComponent },
       { path: 'portfolio', component: PortfolioComponent },
-      { path: 'faq', component: DashboardComponent },
-      { path: 'news', component: DashboardComponent },
-      { path: 'events', component: DashboardComponent },
-      { path: 'campaign', component: DashboardComponent },
-      { path: 'offer', component: DashboardComponent },
+      { path: 'support', component: SupportComponent },
+      { path: 'faq', component: FaqComponent },
+      { path: 'news', component: NewsComponent },
+      { path: 'events', component: EventsComponent },
+      { path: 'campaign', component: CampaignComponent },
+      { path: 'offer', component: OfferComponent },
+      { path: 'blog', component: BlogComponent },
     ]
   }, 
   // {
@@ -48,15 +56,22 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  imports: [ RouterModule.forRoot(appRoutes, {useHash: true}) ],
+  imports: [ RouterModule.forRoot(appRoutes) ], //{useHash: true}
   exports: [ RouterModule ],
   declarations: [
-    DashboardComponent,
+    //DashboardComponent,
     AboutUsComponent,
     ContactUsComponent,
     ProductComponent,
     ServiceComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    SupportComponent,
+    FaqComponent,
+    EventsComponent,
+    OfferComponent,
+    BlogComponent,
+    CampaignComponent,
+    NewsComponent
   ]
 })
 

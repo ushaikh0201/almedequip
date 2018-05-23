@@ -8,7 +8,8 @@ import * as $ from 'jquery';
 })
 export class DashboardComponent implements OnInit {
   //@ViewChild('owlElement') owlElement: OwlCarousel
-
+  oneAtATime: boolean = true;
+  customClass: string = 'customClass';
   constructor() { }
 
   ngOnInit() {
@@ -19,6 +20,7 @@ export class DashboardComponent implements OnInit {
   }
 
   ngAfterViewInit() {
+    //$("#exampleModalCenter").modal("show");
     $(document).ready(function(){
       //$('.owl-carousel').owlCarousel();
       //(<any>$('.owl-carousel')).owlCarousel();

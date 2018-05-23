@@ -11,7 +11,15 @@
 }
 
 .video #accordion .card-body{
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     height: 350px !important;
 } 
 
+.video .panel{
+    margin-bottom: 0px !important;
+}
+
+.card-header:first-child{
+    margin: 0 !important;
+    padding: 0 !important;
+}
