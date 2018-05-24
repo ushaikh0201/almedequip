@@ -922,6 +922,7 @@ header.nav-holder.sticky {
 }
 
 .customers .item img {
+  width:150px;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   -webkit-transition: all 0.3s;
@@ -3595,6 +3596,7 @@ a > code {
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0;
+  margin-bottom: 5px !important;
 }
 
 .card > .list-group:first-child .list-group-item:first-child {

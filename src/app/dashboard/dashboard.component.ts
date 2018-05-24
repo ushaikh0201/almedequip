@@ -23,7 +23,7 @@ export class DashboardComponent implements OnInit {
     //$("#exampleModalCenter").modal("show");
     $(document).ready(function(){
       //$('.owl-carousel').owlCarousel();
-      //(<any>$('.owl-carousel')).owlCarousel();
+      // (<any>$('.owl-carousel')).owlCarousel();
     })
     //   navigation: true, // Show next and prev buttons
     //   slideSpeed: 300,

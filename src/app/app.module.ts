@@ -26,6 +26,7 @@ import { VideoListComponent } from './video-list/video-list.component';
 
 import {APP_BASE_HREF} from '@angular/common';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { AccordionModule } from 'ngx-bootstrap/accordion';
     BrowserModule,
     AppRoutingModule,
     OwlModule,
-    AccordionModule.forRoot() 
+    AccordionModule.forRoot(), 
+    CarouselModule.forRoot()
   ],
   exports:[],
   providers: [{provide: APP_BASE_HREF, useValue : '/' }],

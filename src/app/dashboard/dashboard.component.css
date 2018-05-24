@@ -23,3 +23,10 @@
     margin: 0 !important;
     padding: 0 !important;
 }
+
+.card {
+    margin-bottom: 5px !important;
+}
+.carousel-indicators{
+    bottom: -35px !important;
+}

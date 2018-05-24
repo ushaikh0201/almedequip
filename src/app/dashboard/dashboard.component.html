@@ -1,132 +1,66 @@
 <!-- Home crousel -->
 <section style="background: url('assets/img/photogrid.jpg') center center repeat; background-size: cover;" class="bar background-white relative-positioned">
     <div class="container">
-      <!-- Carousel Start-->
-      <div class="home-carousel">
-        <div class="dark-mask mask-primary"></div>
-        <div class="container">
-          <div class="homepage owl-carousel">
-            <div class="item">
-              <div class="row">
-                <div class="col-md-5 text-right">
-                  <p><img src="assets/img/logo.png" alt="" class="ml-auto"></p>
-                  <h1>Multipurpose responsive theme</h1>
-                  <p>Business. Corporate. Agency.<br>Portfolio. Blog. E-commerce.</p>
-                </div>
-                <div class="col-md-7"><img src="assets/img/template-homepage.png" alt="" class="img-fluid"></div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="row">
-                <div class="col-md-7 text-center"><img src="assets/img/template-mac.png" alt="" class="img-fluid"></div>
-                <div class="col-md-5">
-                  <h2>46 HTML pages full of features</h2>
-                  <ul class="list-unstyled">
-                    <li>Sliders and carousels</li>
-                    <li>4 Header variations</li>
-                    <li>Google maps, Forms, Megamenu, CSS3 Animations and much more</li>
-                    <li>+ 11 extra pages showing template features</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="row">
-                <div class="col-md-5 text-right">
-                  <h1>Design</h1>
-                  <ul class="list-unstyled">
-                    <li>Clean and elegant design</li>
-                    <li>Full width and boxed mode</li>
-                    <li>Easily readable Roboto font and awesome icons</li>
-                    <li>7 preprepared colour variations</li>
-                  </ul>
-                </div>
-                <div class="col-md-7"><img src="assets/img/template-easy-customize.png" alt="" class="img-fluid"></div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="row">
-                <div class="col-md-7"><img src="assets/img/template-easy-code.png" alt="" class="img-fluid"></div>
-                <div class="col-md-5">
-                  <h1>Easy to customize</h1>
-                  <ul class="list-unstyled">
-                    <li>7 preprepared colour variations.</li>
-                    <li>Easily to change fonts</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+        <!-- Carousel Start-->
+        <div class="home-carousel">
+            <div class="dark-mask mask-primary"></div>
+            <carousel>
+                <slide>
+                    <div class="row">
+                        <div class="col-md-5 text-right">
+                            <p><img src="assets/img/logo.png" alt="" class="ml-auto"></p>
+                            <h1>Multipurpose responsive theme</h1>
+                            <p>Business. Corporate. Agency.<br>Portfolio. Blog. E-commerce.</p>
+                        </div>
+                        <div class="col-md-7"><img src="assets/img/template-homepage.png" alt="" class="img-fluid"></div>
+                    </div>
+                </slide>
+                <slide>
+                    <div class="row">
+                        <div class="col-md-7 text-center"><img src="assets/img/template-mac.png" alt="" class="img-fluid"></div>
+                        <div class="col-md-5">
+                            <h2>46 HTML pages full of features</h2>
+                            <ul class="list-unstyled">
+                            <li>Sliders and carousels</li>
+                            <li>4 Header variations</li>
+                            <li>Google maps, Forms, Megamenu, CSS3 Animations and much more</li>
+                            <li>+ 11 extra pages showing template features</li>
+                            </ul>
+                        </div>
+                    </div>
+                </slide>
+                <slide>
+                    <div class="row">
+                        <div class="col-md-5 text-right">
+                            <h1>Design</h1>
+                            <ul class="list-unstyled">
+                            <li>Clean and elegant design</li>
+                            <li>Full width and boxed mode</li>
+                            <li>Easily readable Roboto font and awesome icons</li>
+                            <li>7 preprepared colour variations</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-7"><img src="assets/img/template-easy-customize.png" alt="" class="img-fluid"></div>
+                    </div>
+                </slide>
+                <slide>
+                    <div class="row">
+                        <div class="col-md-7"><img src="assets/img/template-easy-code.png" alt="" class="img-fluid"></div>
+                        <div class="col-md-5">
+                            <h1>Easy to customize</h1>
+                            <ul class="list-unstyled">
+                            <li>7 preprepared colour variations.</li>
+                            <li>Easily to change fonts</li>
+                            </ul>
+                        </div>
+                    </div>
+                </slide>
+            </carousel>
         </div>
-      </div>
       <!-- Carousel End-->
     </div>
 </section>
 <!-- /.bar -->
-
-<!-- Video and achivements -->
-<section class="bar">
-    <div class="video container">
-        <div class="row">
-            <div class="col-lg-9">
-                <accordion [closeOthers]="oneAtATime">
-                    <accordion-group heading="Header" [panelClass]="customClass">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-12">
-                                        
-                                    <app-video-list></app-video-list>
-                                </div>
-                            </div>
-                        </div>
-                    </accordion-group>
-                    <accordion-group heading="Content 1">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-4"><img src="img/template-easy-code.png" alt="" class="img-fluid"></div>
-                                <div class="col-md-8">
-                                    <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull weather. Drops of rain could be heard hitting the pane, which made him feel quite sad.</p>
-                                    <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull weather. Drops of rain could be heard hitting the pane, which made him feel quite sad.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </accordion-group>
-                    <accordion-group heading="Content 2">
-                        <div class="card-body">His room, a proper human room although a little too small, lay peacefully between its four familiar walls.<br>A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.</div>
-                    </accordion-group>
-                </accordion>
-            </div>
-            <div class="col-lg-3">
-                <div id="accordionTwo" role="tablist">
-                    <div class="card">
-                        <div id="headingFour" role="tab" class="card-header">
-                            <h5 class="mb-0"><a data-toggle="collapse" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">News Feed</a></h5>
-                        </div>
-                        <div id="collapseFour" role="tabpanel" aria-labelledby="headingFour" data-parent="#accordionTwo" class="collapse show">
-                            <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div id="headingFive" role="tab" class="card-header">
-                            <h5 class="mb-0"><a data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive" class="collapsed">Campaign Info</a></h5>
-                        </div>
-                        <div id="collapseFive" role="tabpanel" aria-labelledby="headingFive" data-parent="#accordionTwo" class="collapse">
-                            <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div id="headingSix" role="tab" class="card-header">
-                            <h5 class="mb-0"><a data-toggle="collapse" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix" class="collapsed">Other</a></h5>
-                        </div>
-                        <div id="collapseSix" role="tabpanel" aria-labelledby="headingSix" data-parent="#accordionTwo" class="collapse">
-                            <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <!-- Product section -->
 <section class="bg-white bar">
@@ -237,98 +171,100 @@
         </div>
         <p class="lead">Our client's and vendor's feedback</p>
         <!-- Carousel Start-->
-        <ul class="owl-carousel testimonials list-unstyled equal-height">
-        <li class="item">
-            <div class="testimonial d-flex flex-wrap">
-            <div class="text">
-                <p>------Sample Testimonial------</p>
-                <p>We have installed a modular OT by Almed Equipments, We are thankfull to their expertise and utilization of best technology for our OT installment. They are coorpareted us to build a environment which help to avoid the surgical sight infection. We are specially thankful to Mr. Zakir Shaikh for his effort and innovative idea.</p>
-            </div>
-            <div class="bottom d-flex align-items-center justify-content-between align-self-end">
-                <div class="icon"><i class="fa fa-quote-left"></i></div>
-                <div class="testimonial-info d-flex">
-                <div class="title">
-                    <h5>Usman Shaikh</h5>
-                    <p>CEO, UTechSolutions</p>
+        <div class="testimonials">
+        <carousel>
+            <slide>
+                <div class="testimonial d-flex flex-wrap">
+                    <div class="text">
+                        <p>------Sample Testimonial------</p>
+                        <p>We have installed a modular OT by Almed Equipments, We are thankfull to their expertise and utilization of best technology for our OT installment. They are coorpareted us to build a environment which help to avoid the surgical sight infection. We are specially thankful to Mr. Zakir Shaikh for his effort and innovative idea.</p>
+                    </div>
+                    <div class="bottom d-flex align-items-center justify-content-between align-self-end">
+                        <div class="icon"><i class="fa fa-quote-left"></i></div>
+                        <div class="testimonial-info d-flex">
+                        <div class="title">
+                            <h5>Usman Shaikh</h5>
+                            <p>CEO, UTechSolutions</p>
+                        </div>
+                        <div class="avatar"><img alt="" src="assets/img/testimonials/ushaikh6.jpg" class="img-fluid"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="avatar"><img alt="" src="assets/img/testimonials/ushaikh6.jpg" class="img-fluid"></div>
+            </slide>
+            <slide>
+                <div class="testimonial d-flex flex-wrap">
+                <div class="text">
+                        <p>------Sample Testimonial------</p>
+                        <p>We have installed a modular OT by Almed Equipments, We are thankfull to their expertise and utilization of best technology for our OT installment. They are coorpareted us to build a environment which help to avoid the surgical sight infection. We are specially thankful to Mr. Zakir Shaikh for his effort and innovative idea.</p>
                 </div>
-            </div>
-            </div>
-        </li>
-        <li class="item">
-            <div class="testimonial d-flex flex-wrap">
-            <div class="text">
+                <div class="bottom d-flex align-items-center justify-content-between align-self-end">
+                    <div class="icon"><i class="fa fa-quote-left"></i></div>
+                    <div class="testimonial-info d-flex">
+                    <div class="title">
+                        <h5>Usman Shaikh</h5>
+                        <p>CEO, UTechSolutions</p>
+                    </div>
+                    <div class="avatar"><img alt="" src="assets/img/testimonials/ushaikh2.jpg" class="img-fluid"></div>
+                    </div>
+                </div>
+                </div>
+            </slide>
+            <slide>
+                <div class="testimonial d-flex flex-wrap">
+                <div class="text">
+                        <p>------Sample Testimonial------</p>
+                        <p>We have installed a modular OT by Almed Equipments, We are thankfull to their expertise and utilization of best technology for our OT installment. They are coorpareted us to build a environment which help to avoid the surgical sight infection. We are specially thankful to Mr. Zakir Shaikh for his effort and innovative idea.</p>
+                </div>
+                <div class="bottom d-flex align-items-center justify-content-between align-self-end">
+                    <div class="icon"><i class="fa fa-quote-left"></i></div>
+                    <div class="testimonial-info d-flex">
+                    <div class="title">
+                        <h5>Usman Shaikh</h5>
+                        <p>CEO, UTechSolutions</p>
+                    </div>
+                    <div class="avatar"><img alt="" src="assets/img/testimonials/ushaikh3.jpg" class="img-fluid"></div>
+                    </div>
+                </div>
+                </div>
+            </slide>
+            <slide>
+                <div class="testimonial d-flex flex-wrap">
+                <div class="text">
+                        <p>------Sample Testimonial------</p>
+                        <p>We have installed a modular OT by Almed Equipments, We are thankfull to their expertise and utilization of best technology for our OT installment. They are coorpareted us to build a environment which help to avoid the surgical sight infection. We are specially thankful to Mr. Zakir Shaikh for his effort and innovative idea.</p>
+                </div>
+                <div class="bottom d-flex align-items-center justify-content-between align-self-end">
+                    <div class="icon"><i class="fa fa-quote-left"></i></div>
+                    <div class="testimonial-info d-flex">
+                    <div class="title">
+                        <h5>Usman Shaikh</h5>
+                        <p>CEO, UTechSolutions</p>
+                    </div>
+                    <div class="avatar"><img alt="" src="assets/img/testimonials/ushaikh4.jpg" class="img-fluid"></div>
+                    </div>
+                </div>
+                </div>
+            </slide>
+            <slide>
+                <div class="testimonial d-flex flex-wrap">
+                <div class="text">
                     <p>------Sample Testimonial------</p>
                     <p>We have installed a modular OT by Almed Equipments, We are thankfull to their expertise and utilization of best technology for our OT installment. They are coorpareted us to build a environment which help to avoid the surgical sight infection. We are specially thankful to Mr. Zakir Shaikh for his effort and innovative idea.</p>
-            </div>
-            <div class="bottom d-flex align-items-center justify-content-between align-self-end">
-                <div class="icon"><i class="fa fa-quote-left"></i></div>
-                <div class="testimonial-info d-flex">
-                <div class="title">
-                    <h5>Usman Shaikh</h5>
-                    <p>CEO, UTechSolutions</p>
                 </div>
-                <div class="avatar"><img alt="" src="assets/img/testimonials/ushaikh2.jpg" class="img-fluid"></div>
+                <div class="bottom d-flex align-items-center justify-content-between align-self-end">
+                    <div class="icon"><i class="fa fa-quote-left"></i></div>
+                    <div class="testimonial-info d-flex">
+                    <div class="title">
+                        <h5>Usman Shaikh</h5>
+                        <p>CEO, UTechSolutions</p>
+                    </div>
+                    <div class="avatar"><img alt="" src="assets/img/testimonials/ushaikh5.jpg" class="img-fluid"></div>
+                    </div>
                 </div>
-            </div>
-            </div>
-        </li>
-        <li class="item">
-            <div class="testimonial d-flex flex-wrap">
-            <div class="text">
-                    <p>------Sample Testimonial------</p>
-                    <p>We have installed a modular OT by Almed Equipments, We are thankfull to their expertise and utilization of best technology for our OT installment. They are coorpareted us to build a environment which help to avoid the surgical sight infection. We are specially thankful to Mr. Zakir Shaikh for his effort and innovative idea.</p>
-            </div>
-            <div class="bottom d-flex align-items-center justify-content-between align-self-end">
-                <div class="icon"><i class="fa fa-quote-left"></i></div>
-                <div class="testimonial-info d-flex">
-                <div class="title">
-                    <h5>Usman Shaikh</h5>
-                    <p>CEO, UTechSolutions</p>
                 </div>
-                <div class="avatar"><img alt="" src="assets/img/testimonials/ushaikh3.jpg" class="img-fluid"></div>
-                </div>
-            </div>
-            </div>
-        </li>
-        <li class="item">
-            <div class="testimonial d-flex flex-wrap">
-            <div class="text">
-                    <p>------Sample Testimonial------</p>
-                    <p>We have installed a modular OT by Almed Equipments, We are thankfull to their expertise and utilization of best technology for our OT installment. They are coorpareted us to build a environment which help to avoid the surgical sight infection. We are specially thankful to Mr. Zakir Shaikh for his effort and innovative idea.</p>
-            </div>
-            <div class="bottom d-flex align-items-center justify-content-between align-self-end">
-                <div class="icon"><i class="fa fa-quote-left"></i></div>
-                <div class="testimonial-info d-flex">
-                <div class="title">
-                    <h5>Usman Shaikh</h5>
-                    <p>CEO, UTechSolutions</p>
-                </div>
-                <div class="avatar"><img alt="" src="assets/img/testimonials/ushaikh4.jpg" class="img-fluid"></div>
-                </div>
-            </div>
-            </div>
-        </li>
-        <li class="item">
-            <div class="testimonial d-flex flex-wrap">
-            <div class="text">
-                <p>------Sample Testimonial------</p>
-                <p>We have installed a modular OT by Almed Equipments, We are thankfull to their expertise and utilization of best technology for our OT installment. They are coorpareted us to build a environment which help to avoid the surgical sight infection. We are specially thankful to Mr. Zakir Shaikh for his effort and innovative idea.</p>
-            </div>
-            <div class="bottom d-flex align-items-center justify-content-between align-self-end">
-                <div class="icon"><i class="fa fa-quote-left"></i></div>
-                <div class="testimonial-info d-flex">
-                <div class="title">
-                    <h5>Usman Shaikh</h5>
-                    <p>CEO, UTechSolutions</p>
-                </div>
-                <div class="avatar"><img alt="" src="assets/img/testimonials/ushaikh5.jpg" class="img-fluid"></div>
-                </div>
-            </div>
-            </div>
-        </li>
-        </ul>
+            </slide>
+        </carousel>
+        </div>
         <!-- Carousel End-->
     </div>
 </section>
@@ -350,19 +286,91 @@
 <section class="bar bg-gray">
     <div class="container">
         <div class="heading text-center">
-        <h2>Our Clients</h2>
+            <h2>Our Clients</h2>
         </div>
-        <ul class="list-unstyled owl-carousel customers no-mb">
-        <li class="item"><img src="assets/img/customer-1.png" alt="" class="img-fluid"></li>
-        <li class="item"><img src="assets/img/customer-2.png" alt="" class="img-fluid"></li>
-        <li class="item"><img src="assets/img/customer-3.png" alt="" class="img-fluid"></li>
-        <li class="item"><img src="assets/img/customer-4.png" alt="" class="img-fluid"></li>
-        <li class="item"><img src="assets/img/customer-5.png" alt="" class="img-fluid"></li>
-        <li class="item"><img src="assets/img/customer-6.png" alt="" class="img-fluid"></li>
-        </ul>
+        <div class="customers">
+        <carousel [noPause]="noPause">
+            <slide>
+                <div  class="item">
+                    <img src="assets/img/customer-1.png" alt="" class="img-fluid">
+                    <img src="assets/img/customer-2.png" alt="" class="img-fluid">
+                    <img src="assets/img/customer-3.png" alt="" class="img-fluid">
+                    <img src="assets/img/customer-4.png" alt="" class="img-fluid">
+                    <img src="assets/img/customer-5.png" alt="" class="img-fluid">
+                </div>
+            </slide>
+            <slide class="item">
+                <div  class="item">
+                    <img src="assets/img/customer-6.png" alt="" class="img-fluid">
+                    <img src="assets/img/customer-1.png" alt="" class="img-fluid">
+                    <img src="assets/img/customer-2.png" alt="" class="img-fluid">
+                    <img src="assets/img/customer-3.png" alt="" class="img-fluid">
+                    <img src="assets/img/customer-4.png" alt="" class="img-fluid">
+                </div>
+            </slide>
+        </carousel>
+        </div>
     </div>
 </section>
 <!-- /.bar -->
+
+<!-- Video and achivements collections -->
+<section class="bar">
+    <div class="video container">
+        <div class="heading text-center">
+            <h2>Collections</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-9">
+                <accordion [closeOthers]="oneAtATime">
+                    <accordion-group heading="Videos" [panelClass]="customClass">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <app-video-list></app-video-list>
+                                </div>
+                            </div>
+                        </div>
+                    </accordion-group>
+                    <accordion-group heading="Achivements">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-4"><img src="img/template-easy-code.png" alt="" class="img-fluid"></div>
+                                <div class="col-md-8">
+                                    <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull weather. Drops of rain could be heard hitting the pane, which made him feel quite sad.</p>
+                                    <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull weather. Drops of rain could be heard hitting the pane, which made him feel quite sad.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </accordion-group>
+                    <accordion-group heading="FAQ">
+                        <div class="card-body">His room, a proper human room although a little too small, lay peacefully between its four familiar walls.<br>A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.</div>
+                    </accordion-group>
+                </accordion>
+            </div>
+            <div class="col-lg-3">
+                <accordion [closeOthers]="oneAtATime">
+                    <accordion-group heading="News" [panelClass]="customClass">
+                        <div class="card-body">
+                            <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                        </div>
+                    </accordion-group>
+                    <accordion-group heading="Offers">
+                        <div class="card-body">
+                            <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                        </div>
+                    </accordion-group>
+                    <accordion-group heading="Capaign">
+                        <div class="card-body">
+                            <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                        </div>
+                    </accordion-group>
+                </accordion>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- collections end  -->
 
 <!-- GET IT-->
 <div class="get-it">
