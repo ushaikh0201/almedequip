@@ -4,7 +4,12 @@
         <!-- Carousel Start-->
         <div class="home-carousel">
             <div class="dark-mask mask-primary"></div>
-            <carousel [interval]="0">
+            <style>
+                ol .carousel-indicators{
+                    bottom: -35px !important;
+                }
+            </style>
+            <carousel [interval]="5000">
                 <slide>
                     <div class="row">
                         <div class="col-md-6 text-right">
@@ -31,28 +36,25 @@
                 </slide>
                 <slide>
                     <div class="row">
-                        <div class="col-md-5 text-right">
-                            <h1>Design</h1>
+                        <div class="col-md-6 text-center"><img src="assets/img/carousel/home-slide3.png" alt="" class="img-fluid image-wrap image-shadow"></div>
+                        <div class="col-md-5">
+                            <h1>Magical Disinfectant</h1>
                             <ul class="list-unstyled">
-                            <li>Clean and elegant design</li>
-                            <li>Full width and boxed mode</li>
-                            <li>Easily readable Roboto font and awesome icons</li>
-                            <li>7 preprepared colour variations</li>
+                                <li><i class="fa fa-check-square-o ok-check-color"></i>Elegant product of almed</li>
+                                <li><i class="fa fa-check-square-o ok-check-color"></i>Clean stink smell</li>
+                                <li><i class="fa fa-check-square-o ok-check-color"></i>Distroy bacteria</li>
+                                <li><i class="fa fa-check-square-o ok-check-color"></i>Control air born infection</li>
                             </ul>
                         </div>
-                        <div class="col-md-6 text-center"><img src="assets/img/carousel/home-slide3.png" alt="" class="img-fluid image-wrap image-shadow"></div>
                     </div>
                 </slide>
                 <slide>
                     <div class="row">
-                        <div class="col-md-6 text-center"><img src="assets/img/carousel/home-slide4.png" alt="" class="img-fluid image-wrap image-shadow"></div>
                         <div class="col-md-5">
-                            <h1>Easy to customize</h1>
-                            <ul class="list-unstyled">
-                            <li>7 preprepared colour variations.</li>
-                            <li>Easily to change fonts</li>
-                            </ul>
+                            <h1>Air Flow Circulation Pattern</h1>
+                            <p>Ductless Laminar Air Flow & Positive Pressure System with AC. Ozon producing UV Light given to avoid growth of the bacteria, fungus etc on HEPA filter</p>
                         </div>
+                        <div class="col-md-6 text-center"><img src="assets/img/carousel/home-slide4.png" alt="" class="img-fluid image-wrap image-shadow"></div>
                     </div>
                 </slide>
             </carousel>
@@ -66,7 +68,7 @@
 <section class="bg-white bar">
     <div class="container">
         <div class="heading text-center">
-            <h2>Our Inovative Products</h2>
+            <h2>Our Innovative Products</h2>
         </div>
         <p class="lead">
             Browse the comprehensive range of medical equipment, surgical instruments & hospital products manufactured by Almed Equipment
@@ -75,9 +77,9 @@
         <div class="row">
             <div class="col-lg-3">
                 <div class="home-blog-post">
-                    <div class="image">
-                        <img src="assets/img/default.jpg" alt="" class="img-fluid">
-                        <div class="overlay d-flex align-items-center justify-content-center"><a href="#" class="btn btn-template-outlined-white"><i class="fa fa-chain"> </i> Read More</a></div>
+                    <div class="image text-center">
+                        <img src="assets/img/products/o3-gen.png" alt="o3 gen" class="img-fluid">
+                        <div class="overlay d-flex align-items-center justify-content-center"><a routerLink="/products" class="btn btn-template-outlined-white"><i class="fa fa-chain"> </i> Read More</a></div>
                     </div>
                     <div class="text">
                         <h4><a href="#">O3 Gen Magical Disinfectant</a></h4>
@@ -88,9 +90,9 @@
             </div>
             <div class="col-lg-3">
                 <div class="home-blog-post">
-                <div class="image">
-                        <img src="assets/img/default.jpg" alt="" class="img-fluid">
-                    <div class="overlay d-flex align-items-center justify-content-center"><a href="#" class="btn btn-template-outlined-white"><i class="fa fa-chain"> </i> Read More</a></div>
+                <div class="image text-center">
+                        <img src="assets/img/products/surgeon-control-panel.gif" alt="surgeon-control-panel" class="img-fluid">
+                    <div class="overlay d-flex align-items-center justify-content-center"><a routerLink="/products" class="btn btn-template-outlined-white"><i class="fa fa-chain"> </i> Read More</a></div>
                 </div>
                 <div class="text">
                     <h4><a href="#">Surgeon Control Panel</a></h4>
@@ -101,9 +103,9 @@
             </div>
             <div class="col-lg-3">
                 <div class="home-blog-post">
-                    <div class="image">
-                        <img src="assets/img/default.jpg" alt="" class="img-fluid">
-                        <div class="overlay d-flex align-items-center justify-content-center"><a href="#" class="btn btn-template-outlined-white"><i class="fa fa-chain"> </i> Read More</a></div>
+                    <div class="image text-center">
+                        <img src="assets/img/products/positive-pressure-system.jpg" alt="positive-pressure-system" class="img-fluid">
+                        <div class="overlay d-flex align-items-center justify-content-center"><a routerLink="/products" class="btn btn-template-outlined-white"><i class="fa fa-chain"> </i> Read More</a></div>
                     </div>
                     <div class="text">
                         <h4><a href="#">PPS with air conditioning</a></h4>
@@ -114,9 +116,9 @@
             </div>
             <div class="col-lg-3">
                 <div class="home-blog-post">
-                    <div class="image">
-                        <img src="assets/img/default.jpg" alt="" class="img-fluid">
-                        <div class="overlay d-flex align-items-center justify-content-center"><a href="#" class="btn btn-template-outlined-white"><i class="fa fa-chain"> </i> Read More</a></div>
+                    <div class="image text-center">
+                        <img src="assets/img/products/shoe-wrapper-machine.jpg" alt="shoe-wrapper-machine" class="img-fluid">
+                        <div class="overlay d-flex align-items-center justify-content-center"><a routerLink="/products" class="btn btn-template-outlined-white"><i class="fa fa-chain"> </i> Read More</a></div>
                     </div>
                     <div class="text">
                         <h4><a href="#">Shoes Wrapper Machine</a></h4>
@@ -158,6 +160,92 @@
                 <p>Our expertise are available to help for expoxy flooring. We have given best service to several clients and received positive feedback of our work    from them </p>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+<!-- /.bar -->
+
+<!-- Video and achivements collections -->
+<section style="background: url(assets/img/texture-turquoise.png) center top no-repeat; background-size: cover;" class="bar no-mb bg-fixed relative-positioned">
+    <div class="video container">
+        <div class="heading text-center">
+            <h2>Collections</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <accordion [closeOthers]="oneAtATime">
+                    <accordion-group heading="Videos" [isOpen]="true" [panelClass]="customClass">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <app-video-list></app-video-list>
+                                </div>
+                            </div>
+                        </div>
+                    </accordion-group>
+                    <accordion-group heading="Achivements">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-4"><img src="img/template-easy-code.png" alt="" class="img-fluid"></div>
+                                <div class="col-md-8">
+                                    <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull weather. Drops of rain could be heard hitting the pane, which made him feel quite sad.</p>
+                                    <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull weather. Drops of rain could be heard hitting the pane, which made him feel quite sad.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </accordion-group>
+                    <accordion-group heading="FAQ">
+                        <div class="card-body">His room, a proper human room although a little too small, lay peacefully between its four familiar walls.<br>A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.</div>
+                    </accordion-group>
+                    <accordion-group heading="News" [panelClass]="customClass">
+                        <div class="card-body">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </div>
+                    </accordion-group>
+                    <accordion-group heading="Offers">
+                        <div class="card-body">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </div>
+                    </accordion-group>
+                    <accordion-group heading="Capaign">
+                        <div class="card-body">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </div>
+                    </accordion-group>
+                </accordion>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- collections end  -->
+
+<!-- Clients section -->
+<section class="bar bg-gray">
+    <div class="container">
+        <div class="heading text-center">
+            <h2>Our Clients</h2>
+        </div>
+        <div class="customers">
+        <carousel [noPause]="noPause">
+            <slide>
+                <div  class="item">
+                    <img src="assets/img/customer-1.png" alt="" class="img-fluid">
+                    <img src="assets/img/customer-2.png" alt="" class="img-fluid">
+                    <img src="assets/img/customer-3.png" alt="" class="img-fluid">
+                    <img src="assets/img/customer-4.png" alt="" class="img-fluid">
+                    <img src="assets/img/customer-5.png" alt="" class="img-fluid">
+                </div>
+            </slide>
+            <slide class="item">
+                <div  class="item">
+                    <img src="assets/img/customer-6.png" alt="" class="img-fluid">
+                    <img src="assets/img/customer-1.png" alt="" class="img-fluid">
+                    <img src="assets/img/customer-2.png" alt="" class="img-fluid">
+                    <img src="assets/img/customer-3.png" alt="" class="img-fluid">
+                    <img src="assets/img/customer-4.png" alt="" class="img-fluid">
+                </div>
+            </slide>
+        </carousel>
         </div>
     </div>
 </section>
@@ -282,113 +370,10 @@
 </section>
 <!-- /.bar -->
 
-<!-- Clients section -->
-<section class="bar bg-gray">
-    <div class="container">
-        <div class="heading text-center">
-            <h2>Our Clients</h2>
-        </div>
-        <div class="customers">
-        <carousel [noPause]="noPause">
-            <slide>
-                <div  class="item">
-                    <img src="assets/img/customer-1.png" alt="" class="img-fluid">
-                    <img src="assets/img/customer-2.png" alt="" class="img-fluid">
-                    <img src="assets/img/customer-3.png" alt="" class="img-fluid">
-                    <img src="assets/img/customer-4.png" alt="" class="img-fluid">
-                    <img src="assets/img/customer-5.png" alt="" class="img-fluid">
-                </div>
-            </slide>
-            <slide class="item">
-                <div  class="item">
-                    <img src="assets/img/customer-6.png" alt="" class="img-fluid">
-                    <img src="assets/img/customer-1.png" alt="" class="img-fluid">
-                    <img src="assets/img/customer-2.png" alt="" class="img-fluid">
-                    <img src="assets/img/customer-3.png" alt="" class="img-fluid">
-                    <img src="assets/img/customer-4.png" alt="" class="img-fluid">
-                </div>
-            </slide>
-        </carousel>
-        </div>
-    </div>
-</section>
-<!-- /.bar -->
-
-<!-- Video and achivements collections -->
-<section class="bar">
-    <div class="video container">
-        <div class="heading text-center">
-            <h2>Collections</h2>
-        </div>
-        <div class="row">
-            <div class="col-lg-9">
-                <accordion [closeOthers]="oneAtATime">
-                    <accordion-group heading="Videos" [panelClass]="customClass">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <app-video-list></app-video-list>
-                                </div>
-                            </div>
-                        </div>
-                    </accordion-group>
-                    <accordion-group heading="Achivements">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-4"><img src="img/template-easy-code.png" alt="" class="img-fluid"></div>
-                                <div class="col-md-8">
-                                    <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull weather. Drops of rain could be heard hitting the pane, which made him feel quite sad.</p>
-                                    <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull weather. Drops of rain could be heard hitting the pane, which made him feel quite sad.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </accordion-group>
-                    <accordion-group heading="FAQ">
-                        <div class="card-body">His room, a proper human room although a little too small, lay peacefully between its four familiar walls.<br>A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.</div>
-                    </accordion-group>
-                </accordion>
-            </div>
-            <div class="col-lg-3">
-                <accordion [closeOthers]="oneAtATime">
-                    <accordion-group heading="News" [panelClass]="customClass">
-                        <div class="card-body">
-                            <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-                        </div>
-                    </accordion-group>
-                    <accordion-group heading="Offers">
-                        <div class="card-body">
-                            <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-                        </div>
-                    </accordion-group>
-                    <accordion-group heading="Capaign">
-                        <div class="card-body">
-                            <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-                        </div>
-                    </accordion-group>
-                </accordion>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- collections end  -->
-
-<!-- GET IT-->
-<div class="get-it">
-    <div class="container">
-        <div class="row">
-        <div class="col-lg-8 text-center p-3">
-            <h3>Do you want cool website like this one?</h3>
-        </div>
-        <div class="col-lg-4 text-center p-3">   <a href="#" class="btn btn-template-outlined-white">Buy this template now</a></div>
-        </div>
-    </div>
-</div>
-
-
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
     Launch demo modal
-</button>
+</button> -->
 <!--Modal: modalVM-->
 
 <!-- Modal -->

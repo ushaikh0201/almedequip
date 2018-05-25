@@ -1,3 +1,9 @@
 footer.main-footer .copyrights{
     padding: 10px 0 !important;
 }
+.footer.main-footer .footer-blog-list li{
+    margin-bottom: 0 !important;
+}
+.footer .fa .fa-anchor{
+    font-size: 10px;
+}

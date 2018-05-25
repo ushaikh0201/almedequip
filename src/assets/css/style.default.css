@@ -2144,6 +2144,7 @@ footer.main-footer {
 }
 
 footer.main-footer a {
+  font-size: 14px;
   color: inherit;
   color: #eee;
 }
@@ -2167,7 +2168,7 @@ footer.main-footer hr {
 }
 
 footer.main-footer .footer-blog-list li {
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 
 footer.main-footer .image {

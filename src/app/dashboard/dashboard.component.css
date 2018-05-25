@@ -1,3 +1,10 @@
+.home-blog-post .image{
+    width: 200px;
+    height: 175px;
+}
+.home-blog-post h4{
+    height: 75px;
+}
 .home-blog-post .text .intro  {
     min-height: 130px !important;
 }
@@ -10,8 +17,8 @@
     font-size: medium !important;
 }
 
-.video #accordion .card-body{
-    /* overflow-y: scroll; */
+.video .card-body{
+    overflow-y: scroll;
     height: 350px !important;
 } 
 
@@ -27,9 +34,7 @@
 .card {
     margin-bottom: 5px !important;
 }
-.carousel-indicators{
-    bottom: -35px !important;
-}
+
 
 .home-carousel h2{
     font-size: 28px !important;
