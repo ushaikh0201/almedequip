@@ -55,37 +55,36 @@
 <!-- Navbar Start-->
 <header class="nav-holder make-sticky">
     <div id="navbar" role="navigation" class="navbar navbar-expand-lg">
-        <div class="container"><a href="index.html" class="navbar-brand home"><img src="assets/img/logo.png" alt="Universal logo" class="d-none d-md-inline-block"><img src="assets/img/logo-small.png" alt="Universal logo" class="d-inline-block d-md-none"><span class="sr-only">Universal - go to homepage</span></a>
+        <div class="container"><a routerLink="/" class="navbar-brand home"><img src="assets/img/almed-logo.png" alt="Universal logo" class="d-none d-md-inline-block"><img src="assets/img/almed-logo-small.png" alt="Universal logo" class="d-inline-block d-md-none"><span class="sr-only">Almed - go to homepage</span></a>
         <button type="button" data-toggle="collapse" data-target="#navigation" class="navbar-toggler btn-template-outlined"><span class="sr-only">Toggle navigation</span><i class="fa fa-align-justify"></i></button>
         <div id="navigation" class="navbar-collapse collapse">
             <ul class="nav navbar-nav ml-auto">
                 <li class="nav-item" routerLinkActive="active"><a routerLink="/dashboard">Home </a></li>
                 <li class="nav-item" routerLinkActive="active"><a routerLink="/about-us">About us </a></li>
-                <!-- ========== PRODUCT END ==================-->
+                <!-- ========== PRODUCT START ==================-->
                 <li class="nav-item dropdown menu-large" routerLinkActive="active"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Products<b class="caret"></b></a>
                     <ul class="dropdown-menu megamenu">
                     <li>
                         <div class="row">
-                        <div class="col-lg-6"><img src="assets/img/template-easy-code.png" alt="" class="img-fluid d-none d-lg-block"></div>
-                        <div class="col-lg-3 col-md-6">
+                        <div class="col-lg-4"><img src="assets/img/template-easy-code.png" alt="" class="img-fluid d-none d-lg-block mt-35"></div>
+                        <div class="col-lg-4 col-md-6">
                             <h5>Latest Products</h5>
                             <ul class="list-unstyled mb-3">
-                                <li class="nav-item"><a href="template-accordions.html" class="nav-link">Accordions</a></li>
-                                <li class="nav-item"><a href="template-alerts.html" class="nav-link">Alerts</a></li>
-                                <li class="nav-item"><a href="template-buttons.html" class="nav-link">Buttons</a></li>
-                                <li class="nav-item"><a href="template-content-boxes.html" class="nav-link">Content boxes</a></li>
-                                <li class="nav-item"><a href="template-blocks.html" class="nav-link">Horizontal blocks</a></li>
-                                <li class="nav-item"><a href="template-pagination.html" class="nav-link">Pagination</a></li>
-                                <li class="nav-item"><a href="template-tabs.html" class="nav-link">Tabs</a></li>
-                                <li class="nav-item"><a href="template-typography.html" class="nav-link">Typography</a></li>
+                                <li class="nav-item"><a routerLink="/products" fragment="scp" class="nav-link">Surgical Control Panel</a></li>
+                                <li class="nav-item"><a routerLink="/products" fragment="pps" class="nav-link">Positive Pressure System</a></li>
+                                <li class="nav-item"><a routerLink="/products" fragment="laf" class="nav-link">Laminar Air Flow</a></li>
+                                <li class="nav-item"><a routerLink="/products" fragment="ot-steel-door" class="nav-link">OT Steel Door</a></li>
+                                <li class="nav-item"><a routerLink="/products" fragment="ot-ppgi-door" class="nav-link">OT PPGI Door</a></li>
+                                <li class="nav-item"><a routerLink="/products" fragment="pass-box" class="nav-link">PASS Box</a></li>
                             </ul>
                         </div>
-                        <div class="col-lg-3 col-md-6">
+                        <div class="col-lg-4 col-md-6">
                             <h5>Featured Products</h5>
                             <ul class="list-unstyled mb-3">
-                                <li class="nav-item"><a href="template-header-default.html" class="nav-link">Default sticky header</a></li>
-                                <li class="nav-item"><a href="template-header-nosticky.html" class="nav-link">No sticky header</a></li>
-                                <li class="nav-item"><a href="template-header-light.html" class="nav-link">Light header</a></li>
+                                <li class="nav-item"><a routerLink="/products" fragment="swp" class="nav-link">Shoes Wrapper Machine</a></li>
+                                <li class="nav-item"><a routerLink="/products" fragment="ecg" class="nav-link">ECG Machine</a></li>
+                                <li class="nav-item"><a routerLink="/products" fragment="se" class="nav-link">Surgical Equipments</a></li>
+                                <li class="nav-item"><a routerLink="/products" fragment="o3-gen" class="nav-link">O3 Gen</a></li>
                             </ul>
                         </div>
                         </div>
@@ -96,37 +95,31 @@
                 <!-- ========== SERVICE START ==================-->
                 <li class="nav-item dropdown menu-large" routerLinkActive="active"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Services <b class="caret"></b></a>
                     <ul class="dropdown-menu megamenu">
-                    <li>
-                        <div class="row">
-                        <div class="col-lg-6"><img src="assets/img/template-homepage.png" alt="" class="img-fluid d-none d-lg-block"></div>
-                        <div class="col-lg-3 col-md-6">
-                            <h5>Modular OT</h5>
-                            <ul class="list-unstyled mb-3">
-                            <li class="nav-item"><a href="portfolio-2.html" class="nav-link">2 columns</a></li>
-                            <li class="nav-item"><a href="portfolio-no-space-2.html" class="nav-link">2 columns with negative space</a></li>
-                            <li class="nav-item"><a href="portfolio-3.html" class="nav-link">3 columns</a></li>
-                            <li class="nav-item"><a href="portfolio-no-space-3.html" class="nav-link">3 columns with negative space</a></li>
-                            <li class="nav-item"><a href="portfolio-4.html" class="nav-link">4 columns</a></li>
-                            <li class="nav-item"><a href="portfolio-no-space-4.html" class="nav-link">4 columns with negative space</a></li>
-                            <li class="nav-item"><a href="portfolio-detail.html" class="nav-link">Portfolio - detail</a></li>
-                            <li class="nav-item"><a href="portfolio-detail-2.html" class="nav-link">Portfolio - detail 2</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <h5>Epoxy</h5>
-                            <ul class="list-unstyled mb-3">
-                            <li class="nav-item"><a href="about.html" class="nav-link">About us</a></li>
-                            <li class="nav-item"><a href="team.html" class="nav-link">Our team</a></li>
-                            <li class="nav-item"><a href="team-member.html" class="nav-link">Team member</a></li>
-                            <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-                            </ul>
-                            <h5>Medical Equipments</h5>
-                            <ul class="list-unstyled">
-                            <li class="nav-item"><a href="packages.html" class="nav-link">Packages</a></li>
-                            </ul>
-                        </div>
-                        </div>
-                    </li>
+                        <li>
+                            <div class="row">
+                            <div class="col-lg-4"><img src="assets/img/template-homepage.png" alt="" class="img-fluid d-none d-lg-block mt-35"></div>
+                            <div class="col-lg-4 col-md-6">
+                                <h5>Modular OT</h5>
+                                <ul class="list-unstyled mb-3">
+                                    <li class="nav-item"><a routerLink="/services" fragment="ppgi-ot" class="nav-link">PPGI Modular OT</a></li>
+                                    <li class="nav-item"><a routerLink="/services" fragment="steel-ot" class="nav-link">Steel Modular OT</a></li>
+                                    <li class="nav-item"><a routerLink="/services" fragment="gen-ot" class="nav-link">General Modular OT</a></li>
+                                    <li class="nav-item"><a routerLink="/services" fragment="hpl-ot" class="nav-link">HPL Modular OT</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <h5>Epoxy</h5>
+                                <ul class="list-unstyled mb-3">
+                                    <li class="nav-item"><a routerLink="/services" fragment="epoxy-flooring" class="nav-link">Epoxy Flooring</a></li>
+                                    <li class="nav-item"><a routerLink="/services" fragment="epoxy-coving" class="nav-link">Epoxy Coving</a></li>
+                                </ul>
+                                <h5>Repairing</h5>
+                                <ul class="list-unstyled">
+                                    <li class="nav-item"><a routerLink="/services" fragment="repairing" class="nav-link">All Equipments</a></li>
+                                </ul>
+                            </div>
+                            </div>
+                        </li>
                     </ul>
                 </li>
                 <!-- ========== SERVICES END ==================-->
@@ -135,26 +128,22 @@
                     <ul class="dropdown-menu megamenu">
                     <li>
                         <div class="row">
-                        <div class="col-lg-6"><img src="assets/img/template-easy-code.png" alt="" class="img-fluid d-none d-lg-block"></div>
-                            <div class="col-lg-3 col-md-6">
-                                <h5>Maharashtra</h5>
+                            <div class="col-lg-4"><img src="assets/img/template-easy-code.png" alt="" class="img-fluid d-none d-lg-block mt-35"></div>
+                            <div class="col-lg-4 col-md-6">
+                                <h5>Modular OT Installment</h5>
                                 <ul class="list-unstyled mb-3">
-                                <li class="nav-item"><a href="template-accordions.html" class="nav-link">Accordions</a></li>
-                                <li class="nav-item"><a href="template-alerts.html" class="nav-link">Alerts</a></li>
-                                <li class="nav-item"><a href="template-buttons.html" class="nav-link">Buttons</a></li>
-                                <li class="nav-item"><a href="template-content-boxes.html" class="nav-link">Content boxes</a></li>
-                                <li class="nav-item"><a href="template-blocks.html" class="nav-link">Horizontal blocks</a></li>
-                                <li class="nav-item"><a href="template-pagination.html" class="nav-link">Pagination</a></li>
-                                <li class="nav-item"><a href="template-tabs.html" class="nav-link">Tabs</a></li>
-                                <li class="nav-item"><a href="template-typography.html" class="nav-link">Typography</a></li>
+                                    <li class="nav-item"><a routerLink="/portfolio" fragment="ppgi-ot" class="nav-link">PPGI Modular OT</a></li>
+                                    <li class="nav-item"><a routerLink="/portfolio" fragment="steel-ot" class="nav-link">Steel Modular OT</a></li>
+                                    <li class="nav-item"><a routerLink="/portfolio" fragment="gen-ot" class="nav-link">General Modular OT</a></li>
+                                    <li class="nav-item"><a routerLink="/portfolio" fragment="hpl-ot" class="nav-link">HPL Modular OT</a></li>
                                 </ul>
                             </div>
-                            <div class="col-lg-3 col-md-6">
-                                <h5>Other</h5>
+                            <div class="col-lg-4 col-md-6">
+                                <h5>Others</h5>
                                 <ul class="list-unstyled mb-3">
-                                <li class="nav-item"><a href="template-header-default.html" class="nav-link">Default sticky header</a></li>
-                                <li class="nav-item"><a href="template-header-nosticky.html" class="nav-link">No sticky header</a></li>
-                                <li class="nav-item"><a href="template-header-light.html" class="nav-link">Light header</a></li>
+                                    <li class="nav-item"><a routerLink="/portfolio" fragment="o2-gen-plant" class="nav-link">O2 Generation Plant</a></li>
+                                    <li class="nav-item"><a routerLink="/portfolio" fragment="epoxy" class="nav-link">Epoxy</a></li>
+                                    <li class="nav-item"><a routerLink="/portfolio" fragment="others" class="nav-link">Others</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -175,16 +164,16 @@
                       <li class="dropdown-item"><a routerLink="/campaign" class="nav-link">Campaign</a></li>
                       <li class="dropdown-item"><a routerLink="offer" class="nav-link">Offer</a></li>
                     </ul>
-                  </li>
-                  <!-- ========== More Menu dropdown end ==================-->
+                </li>
+                <!-- ========== More Menu dropdown end ==================-->
             </ul>
         </div>
         <div id="search" class="collapse clearfix">
             <form role="search" class="navbar-form">
-            <div class="input-group">
-                <input type="text" placeholder="Search" class="form-control"><span class="input-group-btn">
-                <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button></span>
-            </div>
+                <div class="input-group">
+                    <input type="text" placeholder="Search" class="form-control"><span class="input-group-btn">
+                    <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button></span>
+                </div>
             </form>
         </div>
         </div>
