@@ -1,0 +1,12 @@
+#navbar .navbar-nav > li > a{
+    padding: 0.6rem 1rem 0.6rem !important;
+    letter-spacing:0 !important;
+    font-size: 0.8rem !important;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+ }
+
+.mt-35{
+    margin-top: 35px;
+}
