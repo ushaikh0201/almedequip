@@ -14,7 +14,10 @@ import { EventsComponent } from './events/events.component';
 import { OfferComponent } from './offer/offer.component';
 import { BlogComponent } from './blog/blog.component';
 import { CampaignComponent } from './campaign/campaign.component';
+import { VideoListComponent } from './video-list/video-list.component';
 
+import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 // const routes: Routes = [
 //   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
 //   { path: 'dashboard', component: DashboardComponent},
@@ -56,10 +59,14 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  imports: [ RouterModule.forRoot(appRoutes) ], //{useHash: true}
+  imports: [ 
+    RouterModule.forRoot(appRoutes),
+    AccordionModule.forRoot(),
+    CarouselModule.forRoot()
+  ], //{useHash: true}
   exports: [ RouterModule ],
   declarations: [
-    //DashboardComponent,
+    DashboardComponent,
     AboutUsComponent,
     ContactUsComponent,
     ProductComponent,
@@ -71,7 +78,8 @@ const appRoutes: Routes = [
     OfferComponent,
     BlogComponent,
     CampaignComponent,
-    NewsComponent
+    NewsComponent,
+    VideoListComponent    
   ]
 })
 
