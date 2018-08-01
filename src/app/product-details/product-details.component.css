@@ -1,0 +1,9 @@
+.nav-pills .show>.nav-link{
+    color: #007bff;
+    border-left: 5px solid #007bff;
+    border-top: 1px dotted #007bff;
+    border-right: 1px dotted #007bff;
+    border-bottom: 1px dotted #007bff;
+    background: #e8f3ff !important;
+    font-weight: bold !important;
+}

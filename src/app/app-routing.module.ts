@@ -2,8 +2,7 @@ import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FullLayoutComponent } from './full-layout/full-layout.component';
-import { ProductComponent } from './product/product.component';
-import { ServiceComponent } from './service/service.component';
+// import { ProductComponent } from './product/product.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
@@ -18,6 +17,7 @@ import { VideoListComponent } from './video-list/video-list.component';
 
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+
 // const routes: Routes = [
 //   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
 //   { path: 'dashboard', component: DashboardComponent},
@@ -33,8 +33,10 @@ const appRoutes: Routes = [
       { path: '', component: DashboardComponent },
       { path: 'about-us', component: AboutUsComponent },
       { path: 'contact-us', component: ContactUsComponent },
-      { path: 'products', component: ProductComponent },
-      { path: 'services', component: ServiceComponent },
+      { path: 'products', loadChildren: './product/product.module#ProductModule' },
+      { path: 'product-details', loadChildren: './product-details/product-details.module#ProductDetailsModule' },
+      { path: 'services', loadChildren: './service/service.module#ServiceModule' },
+      { path: 'service-details', loadChildren: './service-details/service-details.module#ServiceDetailsModule' },
       { path: 'portfolio', component: PortfolioComponent },
       { path: 'support', component: SupportComponent },
       { path: 'faq', component: FaqComponent },
@@ -69,8 +71,6 @@ const appRoutes: Routes = [
     DashboardComponent,
     AboutUsComponent,
     ContactUsComponent,
-    ProductComponent,
-    ServiceComponent,
     PortfolioComponent,
     SupportComponent,
     FaqComponent,
@@ -79,7 +79,7 @@ const appRoutes: Routes = [
     BlogComponent,
     CampaignComponent,
     NewsComponent,
-    VideoListComponent    
+    VideoListComponent
   ]
 })
 

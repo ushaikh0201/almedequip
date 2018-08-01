@@ -69,7 +69,7 @@ $(function () {
     // ------------------------------------------------------- //
     // Customers Slider
     // ------------------------------------------------------ //
-    $(".customers").owlCarousel({
+    /* $(".customers").owlCarousel({
         responsiveClass: true,
         responsive: {
             0: {
@@ -82,13 +82,13 @@ $(function () {
                 items: 6
             }
         }
-    });
+    }); */
 
 
     // ------------------------------------------------------- //
     // Testimonials Slider
     // ------------------------------------------------------ //
-    $(".testimonials").owlCarousel({
+    /* $(".testimonials").owlCarousel({
         items: 4,
         responsiveClass: true,
         responsive: {
@@ -102,13 +102,13 @@ $(function () {
                 items: 4
             }
         }
-    });
+    }); */
 
 
     // ------------------------------------------------------- //
     // Homepage Slider
     // ------------------------------------------------------ //
-    $('.homepage').owlCarousel({
+    /* $('.homepage').owlCarousel({
         loop: true,
         margin: 0,
         dots: true,
@@ -133,7 +133,7 @@ $(function () {
                 loop: true
             }
         }
-    });
+    }); */
 
 
     // ------------------------------------------------------- //
@@ -150,7 +150,7 @@ $(function () {
     // ------------------------------------------------------- //
     // Project Caroudel
     // ------------------------------------------------------ //
-    $('.project').owlCarousel({
+    /* $('.project').owlCarousel({
         loop: true,
         margin: 0,
         dots: true,
@@ -176,7 +176,7 @@ $(function () {
                 loop: true
             }
         }
-    });
+    }); */
 
 
     // ------------------------------------------------------- //
@@ -209,14 +209,14 @@ $(function () {
     // ------------------------------------------------------- //
     //  Shop Detail Carousel
     // ------------------------------------------------------ //
-    $('.shop-detail-carousel').owlCarousel({
+    /* $('.shop-detail-carousel').owlCarousel({
         items: 1,
         thumbs: true,
         nav: false,
         dots: false,
         autoplay: true,
         thumbsPrerendered: true
-    });
+    }); */
 
 
     // ------------------------------------------------------ //

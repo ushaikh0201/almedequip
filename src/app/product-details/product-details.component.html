@@ -1,0 +1,113 @@
+<div id="heading-breadcrumbs">
+  <div class="container">
+    <div class="row d-flex align-items-center flex-wrap">
+      <div class="col-md-7">
+        <h1 class="h2">Products</h1>
+      </div>
+      <div class="col-md-5">
+        <ul class="breadcrumb d-flex justify-content-end">
+          <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+          <li class="breadcrumb-item"><a routerLink="/products">Products</a></li>
+          <li class="breadcrumb-item active">{{ product.name }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="content" *ngIf="product">
+  <div class="container">
+    <div class="row bar">
+      <!-- LEFT COLUMN _________________________________________________________-->
+      <div class="col-lg-3">
+        <!-- MENUS AND FILTERS-->
+        <div class="panel panel-default sidebar-menu">
+          <div class="panel-heading">
+            <h3 class="h4 panel-title">Categories</h3>
+          </div>
+          <div class="panel-body">
+            <ul class="nav nav-pills flex-column text-sm category-menu">
+              <li class="nav-item"><a href="shop-category.html" class="nav-link active d-flex align-items-center justify-content-between"><span>Latest </span><span class="badge badge-secondary">6</span></a>
+                <ul class="nav nav-pills flex-column" *ngIf="products">
+                  <li class="nav-item" [ngClass]="(code == product.code) ? 'show' : ''" *ngFor="let product of products"><a  *ngIf="product.category == 'latest'" routerLink="/product-details" [queryParams]="{ code:product.code }" class="nav-link">{{ product.name }}</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a href="shop-category.html" class="nav-link d-flex align-items-center justify-content-between"><span>Featured </span><span class="badge badge-light">3</span></a>
+                <ul class="nav nav-pills flex-column" *ngIf="products">
+                  <li class="nav-item" *ngFor="let product of products"><a  *ngIf="product.category == 'featured'"   routerLink="/product-details" [queryParams]="{ code:product.code }" class="nav-link">{{ product.name }}</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-9">
+        <p class="goToDescription"><a href="#details" class="scroll-to text-uppercase">Scroll to product details, technical specification and sizing</a></p>
+        <div id="productMain" class="row">
+          <div class="col-sm-6">
+            <carousel [interval]="5000">
+              <slide>
+                <div> <img src="{{ product.img }}" alt="" class="img-fluid"></div>
+              </slide>
+              <slide>
+                <div> <img src="{{ product.img }}" alt="" class="img-fluid"></div>
+              </slide>
+              <slide>
+                <div> <img src="{{ product.img }}" alt="" class="img-fluid"></div>
+              </slide>
+            </carousel>
+          </div>
+          <!-- <div class="col-sm-6">
+            <div class="box">
+              <form>
+                <div class="sizes">
+                  <h3>Available sizes</h3>
+                  <select class="bs-select">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                    <option value="x-large">X Large</option>
+                  </select>
+                </div>
+                <p class="price">$124.00</p>
+                <p class="text-center">
+                  <button type="submit" class="btn btn-template-outlined"><i class="fa fa-shopping-cart"></i> Add to cart</button>
+                  <button type="submit" data-toggle="tooltip" data-placement="top" title="Add to wishlist" class="btn btn-default"><i class="fa fa-heart-o"></i></button>
+                </p>
+              </form>
+            </div>
+            <div data-slider-id="1" class="owl-thumbs">
+              <button class="owl-thumb-item"><img src="{{ product.img }}" alt="" class="img-fluid"></button>
+              <button class="owl-thumb-item"><img src="{{ product.img }}" alt="" class="img-fluid"></button>
+              <button class="owl-thumb-item"><img src="{{ product.img }}" alt="" class="img-fluid"></button>
+            </div>
+          </div> -->
+        </div>
+        <div id="details" class="box mb-4 mt-4">
+          <p></p>
+          <h4>Product details</h4>
+          <p>{{ product.details }}</p>
+          <h4>Teachnical Specification</h4>
+          <ul *ngIf="product.tech_spec">
+            <li *ngFor="let spec of product.tech_spec">{{ spec }}</li>
+          </ul>
+          <h4>Usage</h4>
+          <ul *ngIf="product.usage">
+            <li *ngFor="let u of product.usage">{{ u }}</li>
+          </ul>
+          <blockquote class="blockquote">
+            <p class="mb-0"><em>{{ product.main_content }}</em></p>
+          </blockquote>
+        </div>
+        <div id="product-social" class="box social text-center mb-5 mt-5">
+          <h4 class="heading-light">Show it to your friends</h4>
+          <ul class="social list-inline">
+            <li class="list-inline-item"><a href="#" data-animate-hover="pulse" class="external facebook"><i class="fa fa-facebook"></i></a></li>
+            <li class="list-inline-item"><a href="#" data-animate-hover="pulse" class="external gplus"><i class="fa fa-google-plus"></i></a></li>
+            <li class="list-inline-item"><a href="#" data-animate-hover="pulse" class="external twitter"><i class="fa fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a href="#" data-animate-hover="pulse" class="email"><i class="fa fa-envelope"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

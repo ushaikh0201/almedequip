@@ -67,26 +67,18 @@
                     <li>
                         <div class="row">
                         <div class="col-lg-4"><img src="assets/img/template-easy-code.png" alt="" class="img-fluid d-none d-lg-block mt-35"></div>
-                        <div class="col-lg-4 col-md-6">
-                            <h5>Latest Products</h5>
-                            <ul class="list-unstyled mb-3">
-                                <li class="nav-item"><a routerLink="/products" fragment="scp" class="nav-link">Surgical Control Panel</a></li>
-                                <li class="nav-item"><a routerLink="/products" fragment="pps" class="nav-link">Positive Pressure System</a></li>
-                                <li class="nav-item"><a routerLink="/products" fragment="laf" class="nav-link">Laminar Air Flow</a></li>
-                                <li class="nav-item"><a routerLink="/products" fragment="ot-steel-door" class="nav-link">OT Steel Door</a></li>
-                                <li class="nav-item"><a routerLink="/products" fragment="ot-ppgi-door" class="nav-link">OT PPGI Door</a></li>
-                                <li class="nav-item"><a routerLink="/products" fragment="pass-box" class="nav-link">PASS Box</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <h5>Featured Products</h5>
-                            <ul class="list-unstyled mb-3">
-                                <li class="nav-item"><a routerLink="/products" fragment="swp" class="nav-link">Shoes Wrapper Machine</a></li>
-                                <li class="nav-item"><a routerLink="/products" fragment="ecg" class="nav-link">ECG Machine</a></li>
-                                <li class="nav-item"><a routerLink="/products" fragment="se" class="nav-link">Surgical Equipments</a></li>
-                                <li class="nav-item"><a routerLink="/products" fragment="o3-gen" class="nav-link">O3 Gen</a></li>
-                            </ul>
-                        </div>
+                            <div class="col-lg-4 col-md-6">
+                                <h5>Latest Products</h5>
+                                <ul class="list-unstyled mb-3" *ngIf="products">
+                                    <li class="nav-item" *ngFor="let product of products"><a  *ngIf="product.category == 'latest'"   routerLink="/product-details" [queryParams]="{ code:product.code }" class="nav-link">{{ product.name }}</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <h5>Featured Products</h5>
+                                <ul class="list-unstyled mb-3" *ngIf="products">
+                                    <li class="nav-item" *ngFor="let product of products"><a  *ngIf="product.category == 'featured'"   routerLink="/product-details" [queryParams]="{ code:product.code }" class="nav-link">{{ product.name }}</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </li>
                     </ul>
@@ -100,22 +92,18 @@
                             <div class="col-lg-4"><img src="assets/img/template-homepage.png" alt="" class="img-fluid d-none d-lg-block mt-35"></div>
                             <div class="col-lg-4 col-md-6">
                                 <h5>Modular OT</h5>
-                                <ul class="list-unstyled mb-3">
-                                    <li class="nav-item"><a routerLink="/services" fragment="ppgi-ot" class="nav-link">PPGI Modular OT</a></li>
-                                    <li class="nav-item"><a routerLink="/services" fragment="steel-ot" class="nav-link">Steel Modular OT</a></li>
-                                    <li class="nav-item"><a routerLink="/services" fragment="gen-ot" class="nav-link">General Modular OT</a></li>
-                                    <li class="nav-item"><a routerLink="/services" fragment="hpl-ot" class="nav-link">HPL Modular OT</a></li>
+                                <ul class="list-unstyled mb-3" *ngIf="services">
+                                    <li class="nav-item" *ngFor="let service of services"><a  *ngIf="service.category == 'modular_ot'"   routerLink="/service-details" [queryParams]="{ code:service.code }" class="nav-link">{{ service.name }}</a></li>
                                 </ul>
                             </div>
                             <div class="col-lg-4 col-md-6">
                                 <h5>Epoxy</h5>
-                                <ul class="list-unstyled mb-3">
-                                    <li class="nav-item"><a routerLink="/services" fragment="epoxy-flooring" class="nav-link">Epoxy Flooring</a></li>
-                                    <li class="nav-item"><a routerLink="/services" fragment="epoxy-coving" class="nav-link">Epoxy Coving</a></li>
+                                <ul class="list-unstyled mb-3" *ngIf="services">
+                                    <li class="nav-item" *ngFor="let service of services"><a  *ngIf="service.category == 'epoxy'" routerLink="/service-details" [queryParams]="{ code:service.code }" class="nav-link">{{ service.name }}</a></li>
                                 </ul>
                                 <h5>Repairing</h5>
-                                <ul class="list-unstyled">
-                                    <li class="nav-item"><a routerLink="/services" fragment="repairing" class="nav-link">All Equipments</a></li>
+                                <ul class="list-unstyled mb-3" *ngIf="services">
+                                    <li class="nav-item" *ngFor="let service of services"><a  *ngIf="service.category == 'repairing'" routerLink="/service-details" [queryParams]="{ code:service.code }" class="nav-link">{{ service.name }}</a></li>
                                 </ul>
                             </div>
                             </div>
