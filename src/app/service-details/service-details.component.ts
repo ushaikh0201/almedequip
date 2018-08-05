@@ -15,11 +15,9 @@ export class ServiceDetailsComponent implements OnInit {
   constructor(private dataServices:DataServices, private activatedRoute: ActivatedRoute) { 
     this.activatedRoute.queryParams.subscribe((params: Params)=>{
       this.code   = params['code'];
-      var data = this.dataServices.getJSONData();
-      this.services = data.services;
+      this.services = this.dataServices.services;
       this.service = this.services.find(item => item.code == this.code);
       this.relevantService = this.services.filter(item => item.cat_id == this.service.cat_id);
-      console.log(this.relevantService);
     });
   }
 

@@ -3587,7 +3587,7 @@ a > code {
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #fff;
-  background-color: #4fbfa8;
+  background-color: #4fbfa8 !important;
 }
 
 /*

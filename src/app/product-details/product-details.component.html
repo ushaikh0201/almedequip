@@ -26,14 +26,14 @@
           </div>
           <div class="panel-body">
             <ul class="nav nav-pills flex-column text-sm category-menu">
-              <li class="nav-item"><a href="shop-category.html" class="nav-link active d-flex align-items-center justify-content-between"><span>Latest </span><span class="badge badge-secondary">6</span></a>
+              <li class="nav-item"><a routerLink="/products" [queryParams]="{ category: 'latest' }" [ngClass]="{ 'nav-link d-flex align-items-center justify-content-between': true, 'active': category == 'latest' }"><span>Latest </span><span class="badge badge-secondary">6</span></a>
                 <ul class="nav nav-pills flex-column" *ngIf="products">
-                  <li class="nav-item" [ngClass]="(code == product.code) ? 'show' : ''" *ngFor="let product of products"><a  *ngIf="product.category == 'latest'" routerLink="/product-details" [queryParams]="{ code:product.code }" class="nav-link">{{ product.name }}</a></li>
+                  <li [ngClass]="{ 'nav-item':true, 'show': code == product.code }" *ngFor="let product of products"><a  *ngIf="product.category == 'latest'" routerLink="/product-details" [queryParams]="{ code:product.code }" class="nav-link">{{ product.name }}</a></li>
                 </ul>
               </li>
-              <li class="nav-item"><a href="shop-category.html" class="nav-link d-flex align-items-center justify-content-between"><span>Featured </span><span class="badge badge-light">3</span></a>
+              <li class="nav-item"><a routerLink="/products" [queryParams]="{ category: 'featured' }" [ngClass]="{ 'nav-link d-flex align-items-center justify-content-between': true, 'active': category == 'featured' }"><span>Featured </span><span class="badge badge-light">3</span></a>
                 <ul class="nav nav-pills flex-column" *ngIf="products">
-                  <li class="nav-item" *ngFor="let product of products"><a  *ngIf="product.category == 'featured'"   routerLink="/product-details" [queryParams]="{ code:product.code }" class="nav-link">{{ product.name }}</a></li>
+                  <li [ngClass]="{ 'nav-item':true, 'show': code == product.code }" *ngFor="let product of products"><a  *ngIf="product.category == 'featured'"   routerLink="/product-details" [queryParams]="{ code:product.code }" class="nav-link">{{ product.name }}</a></li>
                 </ul>
               </li>
             </ul>

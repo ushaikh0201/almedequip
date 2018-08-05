@@ -68,13 +68,13 @@
                         <div class="row">
                         <div class="col-lg-4"><img src="assets/img/template-easy-code.png" alt="" class="img-fluid d-none d-lg-block mt-35"></div>
                             <div class="col-lg-4 col-md-6">
-                                <h5>Latest Products</h5>
+                                <h5><a routerLink="/products" [queryParams]="{ category: 'latest' }"> Latest Products</a></h5>
                                 <ul class="list-unstyled mb-3" *ngIf="products">
                                     <li class="nav-item" *ngFor="let product of products"><a  *ngIf="product.category == 'latest'"   routerLink="/product-details" [queryParams]="{ code:product.code }" class="nav-link">{{ product.name }}</a></li>
                                 </ul>
                             </div>
                             <div class="col-lg-4 col-md-6">
-                                <h5>Featured Products</h5>
+                                <h5><a routerLink="/products" [queryParams]="{ category: 'featured' }"> Featured Products</a></h5>
                                 <ul class="list-unstyled mb-3" *ngIf="products">
                                     <li class="nav-item" *ngFor="let product of products"><a  *ngIf="product.category == 'featured'"   routerLink="/product-details" [queryParams]="{ code:product.code }" class="nav-link">{{ product.name }}</a></li>
                                 </ul>
@@ -88,24 +88,14 @@
                 <li class="nav-item dropdown menu-large" routerLinkActive="active"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Services <b class="caret"></b></a>
                     <ul class="dropdown-menu megamenu">
                         <li>
-                            <div class="row">
-                            <div class="col-lg-4"><img src="assets/img/template-homepage.png" alt="" class="img-fluid d-none d-lg-block mt-35"></div>
-                            <div class="col-lg-4 col-md-6">
-                                <h5>Modular OT</h5>
-                                <ul class="list-unstyled mb-3" *ngIf="services">
-                                    <li class="nav-item" *ngFor="let service of services"><a  *ngIf="service.category == 'modular_ot'"   routerLink="/service-details" [queryParams]="{ code:service.code }" class="nav-link">{{ service.name }}</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <h5>Epoxy</h5>
-                                <ul class="list-unstyled mb-3" *ngIf="services">
-                                    <li class="nav-item" *ngFor="let service of services"><a  *ngIf="service.category == 'epoxy'" routerLink="/service-details" [queryParams]="{ code:service.code }" class="nav-link">{{ service.name }}</a></li>
-                                </ul>
-                                <h5>Repairing</h5>
-                                <ul class="list-unstyled mb-3" *ngIf="services">
-                                    <li class="nav-item" *ngFor="let service of services"><a  *ngIf="service.category == 'repairing'" routerLink="/service-details" [queryParams]="{ code:service.code }" class="nav-link">{{ service.name }}</a></li>
-                                </ul>
-                            </div>
+                            <div class="row" *ngIf="serviceCategories">
+                                <div class="col-lg-3"><img src="assets/img/template-homepage.png" alt="" class="img-fluid d-none d-lg-block mt-35"></div>
+                                <div class="col-lg-3 col-md-4" *ngFor="let category of serviceCategories">
+                                    <h5><a routerLink="/services">{{ category.name }}</a></h5>
+                                    <ul class="list-unstyled mb-3" *ngIf="category.list">
+                                        <li class="nav-item" *ngFor="let service of category.list"><a routerLink="/service-details" [queryParams]="{ code:service.code }" class="nav-link">{{ service.name }}</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </li>
                     </ul>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataServices } from '../services/data-services';
+import { DataServices } from "../services/data-services";
 
 @Component({
   selector: 'app-header',
@@ -9,11 +9,15 @@ import { DataServices } from '../services/data-services';
 export class AppHeaderComponent implements OnInit {
   products:any;
   services:any;
-  constructor(protected dataServices:DataServices) { }
+  serviceCategories:any;
+  dataArray:any = [];
+  constructor(protected dataServices: DataServices) {
+    this.products = this.dataServices.products;
+    this.services = this.dataServices.services;
+    this.serviceCategories = this.dataServices.getServiceByCategory();
+  }
 
   ngOnInit() {
-    var data = this.dataServices.getJSONData();
-    this.products = data.products;
-    this.services = data.services;
+    // console.log("dataArray", this.serviceCategories);
   }
 }

@@ -13,7 +13,6 @@ export class ServiceComponent implements OnInit {
   constructor(private dataServices:DataServices) { }
 
   ngOnInit() {
-    this.serviceCategories = this.dataServices.getJSONData();
-    console.log("this.serviceCategories", this.serviceCategories);
+    this.serviceCategories = this.dataServices.serviceCategories;
   }
 }
