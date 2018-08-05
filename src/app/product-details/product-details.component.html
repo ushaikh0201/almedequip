@@ -8,7 +8,7 @@
         <ul class="breadcrumb d-flex justify-content-end">
           <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
           <li class="breadcrumb-item"><a routerLink="/products">Products</a></li>
-          <li class="breadcrumb-item active">{{ product.name }}</li>
+          <li class="breadcrumb-item active" *ngIf="product">{{ product.name }}</li>
         </ul>
       </div>
     </div>
