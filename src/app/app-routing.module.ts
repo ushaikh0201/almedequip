@@ -5,7 +5,6 @@ import { FullLayoutComponent } from './full-layout/full-layout.component';
 // import { ProductComponent } from './product/product.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
 import { SupportComponent } from './support/support.component';
 import { FaqComponent } from './faq/faq.component';
 import { NewsComponent } from './news/news.component';
@@ -37,10 +36,11 @@ const appRoutes: Routes = [
       { path: 'product-details', loadChildren: './product-details/product-details.module#ProductDetailsModule' },
       { path: 'services', loadChildren: './service/service.module#ServiceModule' },
       { path: 'service-details', loadChildren: './service-details/service-details.module#ServiceDetailsModule' },
-      { path: 'portfolio', component: PortfolioComponent },
+      { path: 'portfolio', loadChildren: './portfolio/portfolio.module#PortfolioModule' },
+      { path: 'portfolio-details', loadChildren: './portfolio-details/portfolio-details.module#PortfolioDetailsModule' },
       { path: 'support', component: SupportComponent },
       { path: 'faq', component: FaqComponent },
-      { path: 'news', component: NewsComponent },
+      { path: 'news', component: NewsComponent }, 
       { path: 'events', component: EventsComponent },
       { path: 'campaign', component: CampaignComponent },
       { path: 'offer', component: OfferComponent },
@@ -71,7 +71,6 @@ const appRoutes: Routes = [
     DashboardComponent,
     AboutUsComponent,
     ContactUsComponent,
-    PortfolioComponent,
     SupportComponent,
     FaqComponent,
     EventsComponent,

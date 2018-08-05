@@ -321,5 +321,143 @@ export const data = {
             ],
             "main_content" : ""
         }
+    ],
+    "portfolio_categories":[
+        {
+            "id"        : 1,
+            "name"      : "Modular OT Installment",
+            "code"      : "moi",
+        },
+        {
+            "id"        : 2,
+            "name"      : "Epoxy",
+            "code"      : "epo",
+        },
+        {
+            "id"        : 3,
+            "name"      : "Others",
+            "code"      : "otr",
+        }
+    ],
+    "portfolio":[
+        {
+            "id"        : 1,
+            "name"      : "PPGI Modular OT",
+            "cat_id"    : 1,
+            "projects"  : [
+                {
+                    "id"            : 1,
+                    "project_name"  : "",
+                    "client_name"   : "",
+                    "services"      : "",
+                    "technologies"  : "",
+                    "location"      : "",
+                    "img"           : "assets/img/default.jpg",
+                    "description"   : "",
+                }
+            ]
+        },
+        {
+            "id"        : 2,
+            "name"      : "Steel Modular OT",
+            "cat_id"    : 1,
+            "projects"  : [
+                {
+                    "id"            : 1,
+                    "project_name"  : "",
+                    "client_name"   : "",
+                    "services"      : "",
+                    "technologies"  : "",
+                    "location"      : "",
+                    "img"           : "assets/img/default.jpg",
+                    "description"   : "",
+                }
+            ]
+        },
+        {
+            "id"        : 3,
+            "name"      : "General Modular OT",
+            "cat_id"    : 1,
+            "projects"  : [
+                {
+                    "id"            : 1,
+                    "project_name"  : "",
+                    "client_name"   : "",
+                    "services"      : "",
+                    "technologies"  : "",
+                    "location"      : "",
+                    "img"           : "assets/img/default.jpg",
+                    "description"   : "",
+                }
+            ]
+        },
+        {
+            "id"        : 4,
+            "name"      : "HPL Modular OT",
+            "cat_id"    : 1,
+            "projects"  : [
+                {
+                    "id"            : 1,
+                    "project_name"  : "",
+                    "client_name"   : "",
+                    "services"      : "",
+                    "technologies"  : "",
+                    "location"      : "",
+                    "img"           : "assets/img/default.jpg",
+                    "description"   : "",
+                }
+            ]
+        },
+        {
+            "id"        : 5,
+            "name"      : "O2 Generation Plant",
+            "cat_id"    : 2,
+            "projects"  : [
+                {
+                    "id"            : 1,
+                    "project_name"  : "",
+                    "client_name"   : "",
+                    "services"      : "",
+                    "technologies"  : "",
+                    "location"      : "",
+                    "img"           : "assets/img/default.jpg",
+                    "description"   : "",
+                }
+            ]
+        },
+        {
+            "id"        : 6,
+            "name"      : "Epoxy",
+            "cat_id"    : 2,
+            "projects"  : [
+                {
+                    "id"            : 1,
+                    "project_name"  : "",
+                    "client_name"   : "",
+                    "services"      : "",
+                    "technologies"  : "",
+                    "location"      : "",
+                    "img"           : "assets/img/default.jpg",
+                    "description"   : "",
+                }
+            ]
+        },
+        {
+            "id"        : 7,
+            "name"      : "Others",
+            "cat_id"    : 3,
+            "projects"  : [
+                {
+                    "id"            : 1,
+                    "project_name"  : "",
+                    "client_name"   : "",
+                    "services"      : "",
+                    "technologies"  : "",
+                    "location"      : "",
+                    "img"           : "assets/img/default.jpg",
+                    "description"   : "",
+                }
+            ]
+        }
     ]
 }
