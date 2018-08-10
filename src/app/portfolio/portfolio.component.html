@@ -6,7 +6,9 @@
       </div>
       <div class="col-md-5">
         <ul class="breadcrumb d-flex justify-content-end">
-          <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+          <li class="breadcrumb-item">
+            <a routerLink="/">Home</a>
+          </li>
           <li class="breadcrumb-item active">Portfolio</li>
         </ul>
       </div>
@@ -28,232 +30,32 @@
       </div>
 
       <div class="row">
-        <div class="col-md-12">
-          <ul class="nav nav-tabs" *ngIf="portfolioCategories">
-            <li [ngClass]="{ 'active': categoryQuery == category.code }" *ngFor="let category of portfolioCategories"><a data-toggle="tab" href="#{{ category.code }}">{{ category.name }}</a></li>
-          </ul>
-          
-          <div class="tab-content">
-            <div id="home" class="tab-pane fade in active">
-              <h3>HOME</h3>
-              <p>Some content.</p>
+        <div class="col-md-12 text-center ">
+          <nav class="nav-justified ">
+            <div class="nav nav-tabs " id="nav-tab" role="tablist" *ngIf="portfolioCategories">
+              <a [ngClass]="{ 'nav-item nav-link': true, 'active': categoryQuery == category.code }" id="pop1-tab" data-toggle="tab" href="#{{ category.code }}" role="tab" aria-controls="pop1" aria-selected="true" *ngFor="let category of portfolioCategories">{{ category.name }}</a>
             </div>
-            <div id="menu1" class="tab-pane fade">
-              <h3>Menu 1</h3>
-              <p>Some content in menu 1.</p>
-            </div>
-            <div id="menu2" class="tab-pane fade">
-              <h3>Menu 2</h3>
-              <p>Some content in menu 2.</p>
+          </nav>
+          <div class="tab-content" id="nav-tabContent" *ngIf="portfolioCategories">
+            <div class="tab-pane fade show active" [ngClass]="{ 'tab-pane fade': true, 'show active': categoryQuery == category.code }" id="{{ category.code }}" role="tabpanel" aria-labelledby="pop1-tab" *ngFor="let category of portfolioCategories">
+              <div class="pt-3"></div>
+              <div *ngIf="category.list">
+                <div class="row portfolio no-space">
+                  <div class="col-sm-4 col-md-4" *ngFor="let list of category.list">
+                      <div class="portfolio-container" *ngFor="let project of list.projects">
+                        <img src="{{ project.img }}" alt="Avatar" class="image">
+                        <div class="overlay">
+                          <div class="text"><a routerLink="/portfolio-details" [queryParams]="{ code: list.code }"> {{ list.name }}</a></div>
+                        </div>
+                      </div>
+                      <!-- /.box-image -->
+                    </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="row portfolio no-space">
-        <div class="col-sm-6 col-md-3">
-          <div class="box-image">
-            <div class="image">
-              <img src="img/portfolio-1.jpg" alt="" class="img-responsive">
-            </div>
-            <div class="bg"></div>
-            <div class="name">
-              <h3>
-                <a href="portfolio-detail.html">Portfolio box-image</a>
-              </h3>
-            </div>
-            <div class="text">
-              <p class="hidden-sm hidden-lg hidden-md">Pellentesque habitant morbi tristique senectus et netus et malesuada</p>
-              <p class="buttons">
-                <a href="portfolio-detail.html" class="btn btn-template-transparent-primary">View</a>
-                <a href="#" class="btn btn-template-transparent-primary">Website</a>
-              </p>
-            </div>
-          </div>
-          <!-- /.box-image -->
-
-        </div>
-
-        <div class="col-sm-6 col-md-3">
-          <div class="box-image">
-            <div class="image">
-              <img src="img/portfolio-2.jpg" alt="" class="img-responsive">
-            </div>
-            <div class="bg"></div>
-            <div class="name">
-              <h3>
-                <a href="portfolio-detail.html">Portfolio box-image</a>
-              </h3>
-            </div>
-            <div class="text">
-              <p class="hidden-sm hidden-lg hidden-md">Pellentesque habitant morbi tristique senectus et netus et malesuada</p>
-              <p class="buttons">
-                <a href="portfolio-detail.html" class="btn btn-template-transparent-primary">View</a>
-                <a href="#" class="btn btn-template-transparent-primary">Website</a>
-              </p>
-            </div>
-          </div>
-          <!-- /.box-image -->
-
-        </div>
-
-        <div class="col-sm-6 col-md-3">
-          <div class="box-image">
-            <div class="image">
-              <img src="img/portfolio-3.jpg" alt="" class="img-responsive">
-            </div>
-            <div class="bg"></div>
-            <div class="name">
-              <h3>
-                <a href="portfolio-detail.html">Portfolio box-image</a>
-              </h3>
-            </div>
-            <div class="text">
-              <p class="hidden-sm hidden-lg hidden-md">Pellentesque habitant morbi tristique senectus et netus et malesuada</p>
-              <p class="buttons">
-                <a href="portfolio-detail.html" class="btn btn-template-transparent-primary">View</a>
-                <a href="#" class="btn btn-template-transparent-primary">Website</a>
-              </p>
-            </div>
-          </div>
-          <!-- /.box-image -->
-
-        </div>
-
-        <div class="col-sm-6 col-md-3">
-          <div class="box-image">
-            <div class="image">
-              <img src="img/portfolio-4.jpg" alt="" class="img-responsive">
-            </div>
-            <div class="bg"></div>
-            <div class="name">
-              <h3>
-                <a href="portfolio-detail.html">Portfolio box-image</a>
-              </h3>
-            </div>
-            <div class="text">
-              <p class="hidden-sm hidden-lg hidden-md">Pellentesque habitant morbi tristique senectus et netus et malesuada</p>
-              <p class="buttons">
-                <a href="portfolio-detail.html" class="btn btn-template-transparent-primary">View</a>
-                <a href="#" class="btn btn-template-transparent-primary">Website</a>
-              </p>
-            </div>
-          </div>
-          <!-- /.box-image -->
-        </div>
-
-        <div class="col-sm-6 col-md-3">
-          <div class="box-image">
-            <div class="image">
-              <img src="img/portfolio-5.jpg" alt="" class="img-responsive">
-            </div>
-            <div class="bg"></div>
-            <div class="name">
-              <h3>
-                <a href="portfolio-detail.html">Portfolio box-image</a>
-              </h3>
-            </div>
-            <div class="text">
-              <p class="hidden-sm hidden-lg hidden-md">Pellentesque habitant morbi tristique senectus et netus et malesuada</p>
-              <p class="buttons">
-                <a href="portfolio-detail.html" class="btn btn-template-transparent-primary">View</a>
-                <a href="#" class="btn btn-template-transparent-primary">Website</a>
-              </p>
-            </div>
-          </div>
-          <!-- /.box-image -->
-        </div>
-
-        <div class="col-sm-6 col-md-3">
-          <div class="box-image">
-            <div class="image">
-              <img src="img/portfolio-6.jpg" alt="" class="img-responsive">
-            </div>
-            <div class="bg"></div>
-            <div class="name">
-              <h3>
-                <a href="portfolio-detail.html">Portfolio box-image</a>
-              </h3>
-            </div>
-            <div class="text">
-              <p class="hidden-sm hidden-lg hidden-md">Pellentesque habitant morbi tristique senectus et netus et malesuada</p>
-              <p class="buttons">
-                <a href="portfolio-detail.html" class="btn btn-template-transparent-primary">View</a>
-                <a href="#" class="btn btn-template-transparent-primary">Website</a>
-              </p>
-            </div>
-          </div>
-          <!-- /.box-image -->
-        </div>
-
-        <div class="col-sm-6 col-md-3">
-          <div class="box-image">
-            <div class="image">
-              <img src="img/portfolio-7.jpg" alt="" class="img-responsive">
-            </div>
-            <div class="bg"></div>
-            <div class="name">
-              <h3>
-                <a href="portfolio-detail.html">Portfolio box-image</a>
-              </h3>
-            </div>
-            <div class="text">
-              <p class="hidden-sm hidden-lg hidden-md">Pellentesque habitant morbi tristique senectus et netus et malesuada</p>
-              <p class="buttons">
-                <a href="portfolio-detail.html" class="btn btn-template-transparent-primary">View</a>
-                <a href="#" class="btn btn-template-transparent-primary">Website</a>
-              </p>
-            </div>
-          </div>
-          <!-- /.box-image -->
-        </div>
-
-        <div class="col-sm-6 col-md-3">
-          <div class="box-image">
-            <div class="image">
-              <img src="img/portfolio-9.jpg" alt="" class="img-responsive">
-            </div>
-            <div class="bg"></div>
-            <div class="name">
-              <h3>
-                <a href="portfolio-detail.html">Portfolio box-image</a>
-              </h3>
-            </div>
-            <div class="text">
-              <p class="hidden-sm hidden-lg hidden-md">Pellentesque habitant morbi tristique senectus et netus et malesuada</p>
-              <p class="buttons">
-                <a href="portfolio-detail.html" class="btn btn-template-transparent-primary">View</a>
-                <a href="#" class="btn btn-template-transparent-primary">Website</a>
-              </p>
-            </div>
-          </div>
-          <!-- /.box-image -->
-        </div>
-
-        <div class="col-sm-6 col-md-3">
-          <div class="box-image">
-            <div class="image">
-              <img src="img/portfolio-8.jpg" alt="" class="img-responsive">
-            </div>
-            <div class="bg"></div>
-            <div class="name">
-              <h3>
-                <a href="portfolio-detail.html">Portfolio box-image</a>
-              </h3>
-            </div>
-            <div class="text">
-              <p class="hidden-sm hidden-lg hidden-md">Pellentesque habitant morbi tristique senectus et netus et malesuada</p>
-              <p class="buttons">
-                <a href="portfolio-detail.html" class="btn btn-template-transparent-primary">View</a>
-                <a href="#" class="btn btn-template-transparent-primary">Website</a>
-              </p>
-            </div>
-          </div>
-          <!-- /.box-image -->
-        </div>
-
-      </div>
-
     </section>
 
   </div>
@@ -312,39 +114,5 @@
     <!-- /.container -->
   </section>
   <!-- /.bar -->
-
-  <section class="bar background-gray no-mb">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="heading text-center">
-            <h2>Our clients</h2>
-          </div>
-
-          <ul class="owl-carousel customers">
-            <li class="item">
-              <img src="img/customer-1.png" alt="" class="img-responsive">
-            </li>
-            <li class="item">
-              <img src="img/customer-2.png" alt="" class="img-responsive">
-            </li>
-            <li class="item">
-              <img src="img/customer-3.png" alt="" class="img-responsive">
-            </li>
-            <li class="item">
-              <img src="img/customer-4.png" alt="" class="img-responsive">
-            </li>
-            <li class="item">
-              <img src="img/customer-5.png" alt="" class="img-responsive">
-            </li>
-            <li class="item">
-              <img src="img/customer-6.png" alt="" class="img-responsive">
-            </li>
-          </ul>
-          <!-- /.owl-carousel -->
-        </div>
-      </div>
-    </div>
-  </section>
 </div>
 <!-- /#content -->

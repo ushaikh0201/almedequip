@@ -1,0 +1,74 @@
+.nav-tabs .nav-link.active {
+    font-weight:bold;
+    background-color: transparent;
+    border-bottom:3px solid #dd0000;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+}
+
+#nav-tab{
+    background: #dadada;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.tab-content{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-bottom: 10px;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+    color: #6a0bcc !important;
+}
+
+.portfolio-container {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .portfolio-container .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .portfolio-container .overlay {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: #008cba99;
+    overflow: hidden;
+    width: 100%;
+    height:0;
+    transition: .5s ease;
+  }
+  
+  .portfolio-container:hover .overlay {
+    bottom: 0;
+    height: 100%;
+  }
+  
+  .portfolio-container .text {
+    color: #7800f3;
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+.background-pentagon .showcase .item{
+  text-align: center;
+}
+.background-pentagon .showcase .item .icon{
+  font-size: 35px;
+}
+.background-pentagon .showcase .item h4.counter{
+  font-size: 25px;
+}

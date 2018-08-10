@@ -105,23 +105,12 @@
                 <li class="nav-item dropdown menu-large" routerLinkActive="active"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Portfolio<b class="caret"></b></a>
                     <ul class="dropdown-menu megamenu">
                     <li>
-                        <div class="row">
-                            <div class="col-lg-4"><img src="assets/img/template-easy-code.png" alt="" class="img-fluid d-none d-lg-block mt-35"></div>
-                            <div class="col-lg-4 col-md-6">
-                                <h5>Modular OT Installment</h5>
-                                <ul class="list-unstyled mb-3">
-                                    <li class="nav-item"><a routerLink="/portfolio" fragment="ppgi-ot" class="nav-link">PPGI Modular OT</a></li>
-                                    <li class="nav-item"><a routerLink="/portfolio" fragment="steel-ot" class="nav-link">Steel Modular OT</a></li>
-                                    <li class="nav-item"><a routerLink="/portfolio" fragment="gen-ot" class="nav-link">General Modular OT</a></li>
-                                    <li class="nav-item"><a routerLink="/portfolio" fragment="hpl-ot" class="nav-link">HPL Modular OT</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <h5>Others</h5>
-                                <ul class="list-unstyled mb-3">
-                                    <li class="nav-item"><a routerLink="/portfolio" fragment="o2-gen-plant" class="nav-link">O2 Generation Plant</a></li>
-                                    <li class="nav-item"><a routerLink="/portfolio" fragment="epoxy" class="nav-link">Epoxy</a></li>
-                                    <li class="nav-item"><a routerLink="/portfolio" fragment="others" class="nav-link">Others</a></li>
+                        <div class="row" *ngIf="portfolioCategories">
+                            <div class="col-lg-3"><img src="assets/img/template-easy-code.png" alt="" class="img-fluid d-none d-lg-block mt-35"></div>
+                            <div class="col-lg-3 col-md-6" *ngFor="let portfolio of portfolioCategories">
+                                <h5><a routerLink="/portfolio" [queryParams]="{ code: portfolio.code }"> {{ portfolio.name }}</a></h5>
+                                <ul class="list-unstyled mb-3" *ngIf="portfolio.list">
+                                    <li class="nav-item" *ngFor="let project of portfolio.list"><a routerLink="/portfolio" [queryParams]="{ code: project }" class="nav-link">{{ project.name }}</a></li>
                                 </ul>
                             </div>
                         </div>

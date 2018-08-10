@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'; 
 import { data } from "../../assets/data";
-import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class DataServices{
