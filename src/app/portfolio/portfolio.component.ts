@@ -9,6 +9,7 @@ import * as $ from 'jquery';
   styleUrls: ['./portfolio.component.css']
 })
 export class PortfolioComponent implements OnInit {
+  oneAtATime: boolean = true;
   categoryQuery: any;
   portfolio: any;
   portfolioCategories: any;

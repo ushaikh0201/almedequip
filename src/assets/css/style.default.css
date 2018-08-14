@@ -1064,10 +1064,10 @@ header.nav-holder.sticky {
 
 @media (max-width: 767px) {
   .home-carousel {
-    text-align: center !important;
+    text-align: center;
   }
   .home-carousel p, .home-carousel h1, .home-carousel ul {
-    text-align: center !important;
+    text-align: center;
   }
   .home-carousel img {
     margin: 10px auto;
@@ -1780,11 +1780,6 @@ header.nav-holder.sticky {
   color: #333;
   text-decoration: none !important;
   margin-top: 15px;
-}
-
-.products-big .image {
-  min-height: 250px;
-  max-height: 250px;
 }
 
 .goToDescription {

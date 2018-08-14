@@ -164,3 +164,8 @@
       top: -17px;
   }
 }
+@media(max-width:768px){
+  .vid-container iframe, .vid-container object, .vid-container embed{
+    transform: scale(0.75);
+  }
+}

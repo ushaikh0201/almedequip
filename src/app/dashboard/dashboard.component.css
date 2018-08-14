@@ -8,16 +8,8 @@
 .home-blog-post .text .intro  {
     min-height: 130px !important;
 }
-
-@media(max-width:768px){
-    .home-blog-post .image{
-        width: 100%;
-        height: auto;
-    }
-
-    .home-blog-post .text .intro  {
-        min-height: 0 !important;
-    }
+.dashboard-carousel{
+    background: url('assets/img/photogrid.jpg') center center repeat; background-size: cover;
 }
 
 .bar {
@@ -48,10 +40,11 @@
 
 
 .home-carousel h2{
-    font-size: 28px !important;
+    font-size: 28px;
     font-weight: bolder;
     text-shadow: -1px 0 #ffffff, 0 1px black, 1px 0 #ffffff, 0 -1px #fff;
     color: initial;
+    margin-top: 20px;
 }
 
 .one-edge-shadow {
@@ -163,4 +156,44 @@
 }
 .ok-check-color{
     color:#006400;
+}
+
+@media(max-width:768px){
+    .dashboard-carousel h1, .dashboard-carousel h2{
+        font-size: 130%;
+        margin-top: 20px;
+    }
+    .dashboard-carousel p{
+        font-size: 65%;
+    }
+    .home-blog-post .image{
+        width: 100%;
+        height: auto;
+    }
+
+    .home-blog-post .text .intro  {
+        min-height: 0 !important;
+    }
+    .home-carousel li, .home-carousel p{
+        font-size: 0.75rem;
+        text-align: left;
+    }
+    .home-carousel p, .home-carousel h1, .home-carousel ul{
+        text-align: left;
+    }
+    p.lead{
+        font-size: 100%
+    }
+    .heading h1, .panel-heading h1, .heading h2, .panel-heading h2, .heading h3, .panel-heading h3, .heading h4, .panel-heading h4, .heading h5, .panel-heading h5, .heading h6, .panel-heading h6{
+        font-size: 130%;
+    }
+    .h4, h4 {
+        font-size: 1rem;
+    }
+    .btn{
+        font-size: 0.6rem;
+    }
+    .card-body{
+        padding: 5px;
+    }
 }

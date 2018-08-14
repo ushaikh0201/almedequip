@@ -6,12 +6,16 @@ import { HttpModule }   from '@angular/http';
 import { PortfolioRoutingModule } from './portfolio-routing.module';
 import { PortfolioComponent } from './portfolio.component';
 
+import { AccordionModule } from 'ngx-bootstrap/accordion';
+
+
 @NgModule({
     imports: [
         CommonModule,
         ReactiveFormsModule,
         PortfolioRoutingModule,
-        HttpModule
+        HttpModule,
+        AccordionModule.forRoot()
     ],
     declarations: [
         PortfolioComponent

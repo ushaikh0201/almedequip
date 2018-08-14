@@ -41,13 +41,21 @@
               <div class="pt-3"></div>
               <div *ngIf="category.list">
                 <div class="row portfolio no-space">
-                  <div class="col-sm-4 col-md-4" *ngFor="let list of category.list">
-                      <div class="portfolio-container" *ngFor="let project of list.projects">
-                        <img src="{{ project.img }}" alt="Avatar" class="image">
-                        <div class="overlay">
-                          <div class="text"><a routerLink="/portfolio-details" [queryParams]="{ code: list.code }"> {{ list.name }}</a></div>
-                        </div>
-                      </div>
+                  <div class="col-sm-12 col-md-12">
+                    <accordion [closeOthers]="oneAtATime">
+                      <accordion-group heading="{{ list.name }}" *ngFor="let list of category.list">
+                        <div class="row" >
+                          <div class="col-md-4" *ngFor="let project of list.projects">
+                            <div class="portfolio-container">
+                              <img src="{{ project.img }}" alt="Avatar" class="image">
+                              <div class="overlay">
+                                <div class="text"><a routerLink="/portfolio-details" [queryParams]="{ code: list.code }"> {{ list.name }}</a></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>  
+                      </accordion-group>
+                    </accordion>
                       <!-- /.box-image -->
                     </div>
                 </div>
@@ -71,7 +79,7 @@
             </div>
             <h4>
               <span class="counter">580</span>
-              <br> Websites
+              <br> Modular OT Installed
 
             </h4>
           </div>
