@@ -1,0 +1,104 @@
+<nb-card class="smart-table">
+    <nb-card-header>
+      Smart Table
+      <button class="btn btn-xs btn-success add-product-action" (click)="addNewProduct()"><i class="fa fa-plus"></i> Add New Product</button>
+    </nb-card-header>
+  
+    <nb-card-body>
+      <ng2-smart-table [settings]="settings" [source]="source">
+      </ng2-smart-table>
+    </nb-card-body>
+</nb-card>
+
+<nb-card class="product-form" *ngIf="productForm">
+    <nb-card-header>Block form <a class="back-smart-table"><i class="fa fa-chevron-circle-left"></i></a></nb-card-header>
+    <nb-card-body>
+        <form [formGroup]="productForm" (ngSubmit)="formProductSubmit()" novalidate>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label>Product Name</label>
+                <input type="text" formControlName="name" class="form-control" (blur)="validateOnBlur('name',$event)"/>
+                <control-messages [control]="productForm.controls.name"></control-messages>
+            </div>
+            <div class="form-group col-md-6">
+                <label>Product Code</label>
+                <input type="text" formControlName="code" class="form-control" (blur)="validateOnBlur('code',$event)"/>
+                <control-messages [control]="productForm.controls.code"></control-messages>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-3">
+                <label>Price</label>
+                <input type="text" formControlName="price" class="form-control" (blur)="validateOnBlur('price',$event)"/>
+                <control-messages [control]="productForm.controls.price"></control-messages>
+            </div>
+            <div class="form-group col-md-3">
+                <label>Status</label>
+                <select formControlName="status" class="form-control" (blur)="validateOnBlur('status',$event)">
+                    <option value="1">Active</option>
+                    <option value="2">InActive</option>
+                </select>
+                <control-messages [control]="productForm.controls.status"></control-messages>
+            </div>
+            <div class="form-group col-md-6">
+                <label>Category</label>
+                <select formControlName="category" class="form-control" (blur)="validateOnBlur('category',$event)">
+                    <option value="1">Latest</option>
+                    <option value="2">Featured</option>
+                    <option value="2">Special</option>
+                </select>
+                <control-messages [control]="productForm.controls.category"></control-messages>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label>Leading Content</label>
+                <textarea formControlName="main_content"  cols="30" rows="10" class="form-control" (blur)="validateOnBlur('main_content',$event)"></textarea>
+                <control-messages [control]="productForm.controls.main_content"></control-messages>
+                <!-- <div class="validation-checkboxes row">
+                    <nb-checkbox status="success" class="col-sm-4" formControlName="new">New</nb-checkbox>
+                    <nb-checkbox status="warning" class="col-sm-4" formControlName="offer">Offer</nb-checkbox>
+                    <nb-checkbox status="danger" class="col-sm-4" formControlName="campaign">Publish</nb-checkbox>
+                </div> -->
+            </div>
+            <div class="form-group col-md-6">
+                <label>Description</label>
+                <textarea formControlName="description"  cols="30" rows="10" class="form-control" (blur)="validateOnBlur('description',$event)"></textarea>
+                <control-messages [control]="productForm.controls.description"></control-messages>
+            </div>
+        </div>
+        <!-- https://stackblitz.com/edit/angular-5e2qjd?file=src%2Fapp%2Fapp.component.html -->
+        <div class="row">
+            <div class="col-md-6" formArrayName="tech_spec">
+                <button type="button" class="btn btn-success btn-block" (click)="addSpecField()"><i class="fa fa-plus"></i> Technical Specification</button>
+                <div class="input-group"  *ngFor="let specification of productForm.controls.tech_spec.controls; let i=index" [formGroupName]="i">
+                    <input type="text" class="form-control" formControlName="specification">
+                    <span class="input-group-append">
+                        <button type="button" class="btn btn-danger input-group-text" (click)="removeSpecField()">
+                        <i class="fa fa-minus text-default"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-6" formArrayName="usage">
+                <button type="button" class="btn btn-success btn-block" (click)="addUsageField()"><i class="fa fa-plus"></i> Usage of Product</button>
+                <div class="input-group"  *ngFor="let language of productForm.controls.usage.controls; let i=index" [formGroupName]="i">
+                    <input type="text" class="form-control" formControlName="usagelist">
+                    <span class="input-group-append">
+                        <button type="button" class="btn btn-danger input-group-text" (click)="removeUsageField()">
+                        <i class="fa fa-minus text-default"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <button type="submit" class="btn btn-primary btn-block"><i class="fa fa-save"></i> Submit</button>
+            </div>
+        </div>
+    </form>
+    </nb-card-body>
+</nb-card>

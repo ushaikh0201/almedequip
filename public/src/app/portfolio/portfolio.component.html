@@ -1,0 +1,126 @@
+<div id="heading-breadcrumbs">
+  <div class="container">
+    <div class="row d-flex align-items-center flex-wrap">
+      <div class="col-md-7">
+        <h1 class="h2">Portfolio</h1>
+      </div>
+      <div class="col-md-5">
+        <ul class="breadcrumb d-flex justify-content-end">
+          <li class="breadcrumb-item">
+            <a routerLink="/">Home</a>
+          </li>
+          <li class="breadcrumb-item active">Portfolio</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="content">
+  <div class="container">
+    <section>
+      <div class="row bar">
+        <div class="col-md-12">
+          <div class="heading">
+            <h2>Portfolio</h2>
+          </div>
+
+          <p class="lead">Portfolio main content render here....</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 text-center ">
+          <nav class="nav-justified ">
+            <div class="nav nav-tabs " id="nav-tab" role="tablist" *ngIf="portfolioCategories">
+              <a [ngClass]="{ 'nav-item nav-link': true, 'active': categoryQuery == category.code }" id="pop1-tab" data-toggle="tab" href="#{{ category.code }}" role="tab" aria-controls="pop1" aria-selected="true" *ngFor="let category of portfolioCategories">{{ category.name }}</a>
+            </div>
+          </nav>
+          <div class="tab-content" id="nav-tabContent" *ngIf="portfolioCategories">
+            <div class="tab-pane fade show active" [ngClass]="{ 'tab-pane fade': true, 'show active': categoryQuery == category.code }" id="{{ category.code }}" role="tabpanel" aria-labelledby="pop1-tab" *ngFor="let category of portfolioCategories">
+              <div class="pt-3"></div>
+              <div *ngIf="category.list">
+                <div class="row portfolio no-space">
+                  <div class="col-sm-12 col-md-12">
+                    <accordion [closeOthers]="oneAtATime">
+                      <accordion-group heading="{{ list.name }}" *ngFor="let list of category.list">
+                        <div class="row" >
+                          <div class="col-md-4" *ngFor="let project of list.projects">
+                            <div class="portfolio-container">
+                              <img src="{{ project.img }}" alt="Avatar" class="image">
+                              <div class="overlay">
+                                <div class="text"><a routerLink="/portfolio-details" [queryParams]="{ code: list.code }"> {{ list.name }}</a></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>  
+                      </accordion-group>
+                    </accordion>
+                      <!-- /.box-image -->
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+  <!-- /#contact.container -->
+
+  <section class="bar background-pentagon no-mb">
+    <div class="container">
+      <div class="row showcase">
+        <div class="col-md-3 col-sm-6">
+          <div class="item">
+            <div class="icon">
+              <i class="fa fa-align-justify"></i>
+            </div>
+            <h4>
+              <span class="counter">580</span>
+              <br> Modular OT Installed
+
+            </h4>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="item">
+            <div class="icon">
+              <i class="fa fa-users"></i>
+            </div>
+            <h4>
+              <span class="counter">100</span>
+              <br> Satisfied Clients</h4>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="item">
+            <div class="icon">
+              <i class="fa fa-copy"></i>
+            </div>
+            <h4>
+              <span class="counter">320</span>
+              <br> Projects
+
+            </h4>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="item">
+            <div class="icon">
+              <i class="fa fa-font"></i>
+            </div>
+            <h4>
+              <span class="counter">923</span>
+              <br> Magazines and Brochures</h4>
+          </div>
+        </div>
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.bar -->
+</div>
+<!-- /#content -->

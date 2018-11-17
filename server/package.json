@@ -1,0 +1,35 @@
+{
+  "name": "mean-stack-express",
+  "version": "1.0.0",
+  "description": "Server for almed equip mean stack",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "engines": {
+    "npm": "6.1.x",
+    "node": "9.2.x"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.1.0",
+    "body-parser": "^1.13.2",
+    "cookies": "^0.7.1",
+    "cors": "^2.8.4",
+    "email-templates": "^3.1.8",
+    "express": "^4.13.0",
+    "express-fileupload": "^0.3.0",
+    "express-jwt": "^3.0.1",
+    "express-session": "^1.15.6",
+    "iso-3166-1-alpha-2": "^1.0.0",
+    "jsonwebtoken": "^5.0.2",
+    "lodash": "^3.10.0",
+    "mongodb": "^2.1.16",
+    "mongoskin": "^2.1.0",
+    "multer": "^1.3.0",
+    "nodemon": "^1.17.5",
+    "q": "^1.4.1",
+    "request": "^2.58.0",
+    "rootpath": "^0.1.2"
+  },
+  "license": "MIT"
+}
