@@ -1,0 +1,5 @@
+.service-list li{
+    list-style: none;
+    text-align: left;
+    text-indent: 5px;
+}

@@ -1,0 +1,79 @@
+<div id="heading-breadcrumbs">
+  <div class="container">
+    <div class="row d-flex align-items-center flex-wrap">
+      <div class="col-md-7">
+        <h1 class="h2">Products</h1>
+      </div>
+      <div class="col-md-5">
+        <ul class="breadcrumb d-flex justify-content-end">
+          <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+          <li class="breadcrumb-item active">Products</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="content">
+  <div class="container">
+    <div class="row bar">
+      <div class="col-md-3">
+        <!-- MENUS AND FILTERS-->
+        <div class="panel panel-default sidebar-menu">
+          <div class="panel-heading">
+            <h3 class="h4 panel-title">Categories</h3>
+            <button type="button"data-toggle="collapse" data-target="#product-category" aria-expanded="true" aria-controls="multiCollapseExample2" class="navbar-toggler btn-template-outlined pull-right">
+              <span class="sr-only">Toggle navigation</span>
+              <i class="fa fa-th"></i>
+              <i class="fa fa-remove"></i>
+            </button>
+          </div>
+          <div class="panel-body">
+            <ul class="nav nav-pills flex-column text-sm category-menu collapse show" id="product-category">
+              <li class="nav-item"><a routerLink="/products" [queryParams]="{ category: 'latest' }" [ngClass]="{ 'nav-link d-flex align-items-center justify-content-between': true, 'active': category == 'latest' }"><span>Latest </span><span class="badge badge-secondary">6</span></a>
+                <ul class="nav nav-pills flex-column" *ngIf="products">
+                  <li class="nav-item" *ngFor="let product of products"><a  *ngIf="product.category == 'latest'" routerLink="/product-details" [queryParams]="{ code:product.code }" class="nav-link">{{ product.name }}</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a routerLink="/products" [queryParams]="{ category: 'featured' }" [ngClass]="{ 'nav-link d-flex align-items-center justify-content-between': true, 'active': category == 'featured' }"><span>Featured </span><span class="badge badge-light">3</span></a>
+                <ul class="nav nav-pills flex-column" *ngIf="products">
+                  <li class="nav-item" *ngFor="let product of products"><a  *ngIf="product.category == 'featured'"   routerLink="/product-details" [queryParams]="{ code:product.code }" class="nav-link">{{ product.name }}</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <p class="text-muted lead">We are engaged in manufacturing an extensive spectrum of medical equipment that is used for various process applications. Our precision finished range is developed using excellent quality raw material and finds application in several industries such as pharmaceutical companies, hospitals etc. Some of our exclusive assortment of medical equipment is as follows:</p>
+        <div class="row products products-big">
+          <div class="col-lg-4 col-md-6" *ngFor="let product of productByCategory">
+            <div class="product">
+              <div class="image"><a href="shop-detail.html"><img src="{{ product.img }}" alt="laf" class="img-fluid image1"></a></div>
+              <div class="text">
+                <h6><a routerLink="/product-details" [queryParams]="{ code:product.code }">{{ product.name }}</a></h6>
+              </div>
+              <div class="ribbon-holder">
+                <div class="ribbon sale">SALE</div>
+                <div class="ribbon new">NEW</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pages">
+          <p class="loadMore text-center"><a href="#" class="btn btn-template-outlined"><i class="fa fa-chevron-down"></i> Load more</a></p>
+          <nav aria-label="Page navigation example" class="d-flex justify-content-center">
+            <ul class="pagination">
+              <li class="page-item"><a href="#" class="page-link"> <i class="fa fa-angle-double-left"></i></a></li>
+              <li class="page-item active"><a href="#" class="page-link">1</a></li>
+              <li class="page-item"><a href="#" class="page-link">2</a></li>
+              <li class="page-item"><a href="#" class="page-link">3</a></li>
+              <li class="page-item"><a href="#" class="page-link">4</a></li>
+              <li class="page-item"><a href="#" class="page-link">5</a></li>
+              <li class="page-item"><a href="#" class="page-link"><i class="fa fa-angle-double-right"></i></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

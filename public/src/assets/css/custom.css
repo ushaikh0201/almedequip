@@ -1,0 +1,59 @@
+button[data-toggle=collapse]{
+    display: none;
+}
+@media (max-width: 767px) {
+    .h2, h2 {
+        font-size: 1rem;
+    }
+    .h5, h5 {
+        font-size: 0.7rem;
+    }
+    .h4, h4 {
+        font-size: 1rem;
+    }
+    .h3, h3 {
+        font-size: 1rem;
+    }
+    .text-sm-center {
+        text-align: center !important;
+    }
+    #heading-breadcrumbs{
+        padding: 1rem 0;
+    }
+    #heading-breadcrumbs .breadcrumb{
+        font-size: 0.65rem;
+    }
+    .team-member  .image .img-fluid{
+        transform: scale(0.65);
+    }
+    .btn{
+        font-size: 0.85rem;
+    }
+    ul ul a.nav-link{
+        font-size: 0.7rem;
+    }
+    #navbar .dropdown-menu a.nav-link{
+      font-size: 0.65rem;
+    }
+    .text-sm, .form-group label, #blog-listing-big .date-comments a, #blog-listing-medium .date-comments a, #blog-listing-big p.intro, #blog-listing-medium p.intro{
+        font-size: 0.8rem;
+    }
+    .lead {
+        font-size: 1rem;
+    }
+    .products-big .image {
+        max-height: 250px;
+    }
+    .col-pcategory{
+        display: block;
+    }
+    button[data-toggle=collapse]{
+        display: block;
+    }
+    button[aria-expanded=true] .fa-th {
+        display: none;
+    }
+    button[aria-expanded=false] .fa-remove {
+        display: none;
+    }
+}

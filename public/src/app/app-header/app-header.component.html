@@ -1,0 +1,149 @@
+<!-- Top bar-->
+<div class="top-bar">
+    <div class="container">
+        <div class="row d-flex align-items-center">
+        <div class="col-md-6 d-md-block d-none">
+            <p>Contact us on +91 9322065136 or almedequip@gmail.com.</p>
+        </div>
+        <div class="col-md-6">
+            <div class="d-flex justify-content-md-end justify-content-between">
+            <ul class="list-inline contact-info d-block d-md-none">
+                <li class="list-inline-item"><a href="#"><i class="fa fa-phone"></i></a></li>
+                <li class="list-inline-item"><a href="#"><i class="fa fa-envelope"></i></a></li>
+            </ul>
+            <div class="login"><a href="javascript:void()" data-toggle="modal" data-target="#login-modal" class="login-btn"><i class="fa fa-sign-in"></i><span class="d-none d-md-inline-block">Sign In</span></a><a href="javascript:void()" class="signup-btn"><i class="fa fa-user"></i><span class="d-none d-md-inline-block">Sign Up</span></a></div>
+            <ul class="social-custom list-inline">
+                <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li class="list-inline-item"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li class="list-inline-item"><a href="#"><i class="fa fa-envelope"></i></a></li>
+            </ul>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+<!-- Top bar end-->
+<!-- Login Modal-->
+<div id="login-modal" tabindex="-1" role="dialog" aria-labelledby="login-modalLabel" aria-hidden="true" class="modal fade">
+    <div role="document" class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h4 id="login-modalLabel" class="modal-title">Customer Login</h4>
+            <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+        </div>
+        <div class="modal-body">
+            <form action="customer-orders.html" method="get">
+            <div class="form-group">
+                <input id="email_modal" type="text" placeholder="email" class="form-control">
+            </div>
+            <div class="form-group">
+                <input id="password_modal" type="password" placeholder="password" class="form-control">
+            </div>
+            <p class="text-center">
+                <button class="btn btn-template-outlined"><i class="fa fa-sign-in"></i> Log in</button>
+            </p>
+            </form>
+            <p class="text-center text-muted">Not registered yet?</p>
+            <p class="text-center text-muted"><a href="customer-register.html"><strong>Register now</strong></a>! It is easy and done in 1 minute and gives you access to special discounts and much more!</p>
+        </div>
+        </div>
+    </div>
+</div>
+<!-- Login modal end-->
+
+<!-- Navbar Start-->
+<header class="nav-holder make-sticky">
+    <div id="navbar" role="navigation" class="navbar navbar-expand-lg">
+        <div class="container"><a routerLink="/" class="navbar-brand home"><img src="assets/img/almed-logo.png" alt="Universal logo" class="d-none d-md-inline-block"><img src="assets/img/almed-logo-small.png" alt="Universal logo" class="d-inline-block d-md-none"><span class="sr-only">Almed - go to homepage</span></a>
+        <button type="button" data-toggle="collapse" data-target="#navigation" class="navbar-toggler btn-template-outlined"><span class="sr-only">Toggle navigation</span><i class="fa fa-align-justify"></i></button>
+        <div id="navigation" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item" routerLinkActive="active"><a routerLink="/dashboard">Home </a></li>
+                <li class="nav-item" routerLinkActive="active"><a routerLink="/about-us">About us </a></li>
+                <!-- ========== PRODUCT START ==================-->
+                <li class="nav-item dropdown menu-large" routerLinkActive="active"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Products<b class="caret"></b></a>
+                    <ul class="dropdown-menu megamenu">
+                    <li>
+                        <div class="row">
+                        <div class="col-lg-4"><img src="assets/img/template-easy-code.png" alt="" class="img-fluid d-none d-lg-block mt-35"></div>
+                            <div class="col-lg-4 col-md-6">
+                                <h5><a routerLink="/products" [queryParams]="{ category: 'latest' }"> Latest Products</a></h5>
+                                <ul class="list-unstyled mb-3" *ngIf="products">
+                                    <li class="nav-item" *ngFor="let product of products"><a  *ngIf="product.category == 'latest'"   routerLink="/product-details" [queryParams]="{ code:product.code }" class="nav-link">{{ product.name }}</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <h5><a routerLink="/products" [queryParams]="{ category: 'featured' }"> Featured Products</a></h5>
+                                <ul class="list-unstyled mb-3" *ngIf="products">
+                                    <li class="nav-item" *ngFor="let product of products"><a  *ngIf="product.category == 'featured'"   routerLink="/product-details" [queryParams]="{ code:product.code }" class="nav-link">{{ product.name }}</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    </ul>
+                </li>
+                <!-- ========== PRODUCT END ==================-->
+                <!-- ========== SERVICE START ==================-->
+                <li class="nav-item dropdown menu-large" routerLinkActive="active"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Services <b class="caret"></b></a>
+                    <ul class="dropdown-menu megamenu">
+                        <li>
+                            <div class="row" *ngIf="serviceCategories">
+                                <div class="col-lg-3"><img src="assets/img/template-homepage.png" alt="" class="img-fluid d-none d-lg-block mt-35"></div>
+                                <div class="col-lg-3 col-md-4" *ngFor="let category of serviceCategories">
+                                    <h5><a routerLink="/services">{{ category.name }}</a></h5>
+                                    <ul class="list-unstyled mb-3" *ngIf="category.list">
+                                        <li class="nav-item" *ngFor="let service of category.list"><a routerLink="/service-details" [queryParams]="{ code:service.code }" class="nav-link">{{ service.name }}</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <!-- ========== SERVICES END ==================-->
+                <!-- ========== PORTFOLIO START ==================-->
+                <li class="nav-item dropdown menu-large" routerLinkActive="active"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Portfolio<b class="caret"></b></a>
+                    <ul class="dropdown-menu megamenu">
+                    <li>
+                        <div class="row" *ngIf="portfolioCategories">
+                            <div class="col-lg-3"><img src="assets/img/template-easy-code.png" alt="" class="img-fluid d-none d-lg-block mt-35"></div>
+                            <div class="col-lg-3 col-md-6" *ngFor="let portfolio of portfolioCategories">
+                                <h5><a routerLink="/portfolio" [queryParams]="{ code: portfolio.code }"> {{ portfolio.name }}</a></h5>
+                                <ul class="list-unstyled mb-3" *ngIf="portfolio.list">
+                                    <li class="nav-item" *ngFor="let project of portfolio.list"><a routerLink="/portfolio" [queryParams]="{ code: project }" class="nav-link">{{ project.name }}</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    </ul>
+                </li>
+                <!-- ========== PORTFOLIO END ==================-->
+                <!-- <li class="nav-item"><a routerLink="/support">Support </a></li> -->
+                <li class="nav-item" routerLinkActive="active"><a routerLink="/contact-us">Contact us </a></li>
+                <!-- ========== More Menu dropdown ==================-->
+                <li class="nav-item dropdown" routerLinkActive="active"><a href="javascript: void(0)" data-toggle="dropdown" class="dropdown-toggle">More <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown-item"><a routerLink="/support" class="nav-link">Support</a></li>
+                      <li class="dropdown-item"><a routerLink="/faq" class="nav-link">FAQ</a></li>
+                      <li class="dropdown-item"><a routerLink="/news" class="nav-link">News</a></li>
+                      <li class="dropdown-item"><a routerLink="/events" class="nav-link">Events</a></li>
+                      <li class="dropdown-item"><a routerLink="/blog" class="nav-link">Blog</a></li>
+                      <li class="dropdown-item"><a routerLink="/campaign" class="nav-link">Campaign</a></li>
+                      <li class="dropdown-item"><a routerLink="/offer" class="nav-link">Offer</a></li>
+                    </ul>
+                </li>
+                <!-- ========== More Menu dropdown end ==================-->
+            </ul>
+        </div>
+        <div id="search" class="collapse clearfix">
+            <form role="search" class="navbar-form">
+                <div class="input-group">
+                    <input type="text" placeholder="Search" class="form-control"><span class="input-group-btn">
+                    <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button></span>
+                </div>
+            </form>
+        </div>
+        </div>
+    </div>
+</header>
+<!-- Navbar End-->
