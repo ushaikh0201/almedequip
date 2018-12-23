@@ -10,6 +10,7 @@ import { AppFooterComponent } from './app-footer/app-footer.component';
 import { AppRoutingModule }     from './app-routing.module';
 import { FullLayoutComponent } from './full-layout/full-layout.component';
 import { DataServices } from './services/data-services';
+// import { NgxSpinnerModule } from 'ngx-spinner';
 
 
 @NgModule({

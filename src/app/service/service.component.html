@@ -1,63 +1,74 @@
-      
-      <div id="heading-breadcrumbs">
-        <div class="container">
-          <div class="row d-flex align-items-center flex-wrap">
-            <div class="col-md-7">
-              <h1 class="h2">Services</h1>
-            </div>
-            <div class="col-md-5">
-              <ul class="breadcrumb d-flex justify-content-end">
-                <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
-                <li class="breadcrumb-item active">Services</li>
-              </ul>
-            </div>
+<div id="heading-breadcrumbs">
+  <div class="container">
+    <div class="row d-flex align-items-center flex-wrap">
+      <div class="col-md-7">
+        <h1 class="h2">Services</h1>
+      </div>
+      <div class="col-md-5">
+        <ul class="breadcrumb d-flex justify-content-end">
+          <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+          <li class="breadcrumb-item active">Services</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="content" class="hide">
+  <div class="container">
+    <section class="bar">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="heading">
+            <h2>Our main services</h2>
+          </div>
+          <p class="lead">Our services are given with dedication and within time period, we have number of statisfied
+            customer. Our main service cover are under the following category.</p>
+        </div>
+      </div>
+      <div class="row services text-center" *ngIf="serviceCategories">
+        <div class="col-md-4" *ngFor="let sc of serviceCategories">
+          <div class="box-simple">
+            <div class="icon-outlined"><i class="fa fa-desktop"></i></div>
+            <h3 class="h4">{{ sc.name }}</h3>
+            <p>{{ sc.description }}</p>
+            <ul class="service-list" *ngIf="sc.list">
+              <li *ngFor="let service of sc.list"><a routerLink="/service-details" [queryParams]="{ code: service.code }">
+                  <i class="fa fa-check"></i> {{ service.name }}</a></li>
+            </ul>
           </div>
         </div>
       </div>
-      <div id="content">
-        <div class="container">
-          <section class="bar">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="heading">
-                  <h2>Our main services</h2>
-                </div>
-                <p class="lead">Our services are given with dedication and within time period, we have number of statisfied customer. Our main service cover are under the following category.</p>
-              </div>
-            </div>
-            <div class="row services text-center" *ngIf="serviceCategories">
-              <div class="col-md-4" *ngFor="let sc of serviceCategories">
-                <div class="box-simple">
-                  <div class="icon-outlined"><i class="fa fa-desktop"></i></div>
-                  <h3 class="h4">{{ sc.name }}</h3>
-                  <p>{{ sc.description }}</p>
-                  <ul class="service-list" *ngIf="sc.list">
-                    <li *ngFor="let service of sc.list"><a routerLink="/service-details" [queryParams]="{ code: service.code }"> <i class="fa fa-check"></i> {{ service.name }}</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="bar pt-0">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="heading">
-                  <h2>Why choose us</h2>
-                </div>
-                <p class="lead">Why choose our service and more ...</p>
-              </div>
-              <div class="col-md-6">
-                <p class="text-sm">More details come here...</p>
-                <ul class="text-xs">
-                  <li>Point 1</li>
-                  <li>Point 2</li>
-                  <li>Point 3</li>
-                </ul>
-              </div>
-              <div class="col-md-6">
-                <p class="text-sm">Second para...</p>
-              </div>
-            </div>
-          </section>
+    </section>
+    <section class="bar pt-0">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="heading">
+            <h2>Why choose us</h2>
+          </div>
+          <p class="lead">Why choose our service and more ...</p>
+        </div>
+        <div class="col-md-6">
+          <p class="text-sm">More details come here...</p>
+          <ul class="text-xs">
+            <li>Point 1</li>
+            <li>Point 2</li>
+            <li>Point 3</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <p class="text-sm">Second para...</p>
         </div>
       </div>
+    </section>
+  </div>
+</div>
+
+<div id="content">
+  <div class="container">
+    <div class="row bar">
+      <div class="col-md-12 text-center">
+        <img src="assets/img/coming-soon.png" alt="" srcset="">
+      </div>
+    </div>
+  </div>
+</div>

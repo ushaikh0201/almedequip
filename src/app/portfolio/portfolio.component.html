@@ -16,7 +16,7 @@
   </div>
 </div>
 
-<div id="content">
+<div id="content" class="hide">
   <div class="container">
     <section>
       <div class="row bar">
@@ -33,23 +33,27 @@
         <div class="col-md-12 text-center ">
           <nav class="nav-justified ">
             <div class="nav nav-tabs " id="nav-tab" role="tablist" *ngIf="portfolioCategories">
-              <a [ngClass]="{ 'nav-item nav-link': true, 'active': categoryQuery == category.code }" id="pop1-tab" data-toggle="tab" href="#{{ category.code }}" role="tab" aria-controls="pop1" aria-selected="true" *ngFor="let category of portfolioCategories">{{ category.name }}</a>
+              <a [ngClass]="{ 'nav-item nav-link': true, 'active': categoryQuery == category.code }" id="pop1-tab"
+                data-toggle="tab" href="#{{ category.code }}" role="tab" aria-controls="pop1" aria-selected="true"
+                *ngFor="let category of portfolioCategories">{{ category.name }}</a>
             </div>
           </nav>
           <div class="tab-content" id="nav-tabContent" *ngIf="portfolioCategories">
-            <div class="tab-pane fade show active" [ngClass]="{ 'tab-pane fade': true, 'show active': categoryQuery == category.code }" id="{{ category.code }}" role="tabpanel" aria-labelledby="pop1-tab" *ngFor="let category of portfolioCategories">
+            <div class="tab-pane fade show active" [ngClass]="{ 'tab-pane fade': true, 'show active': categoryQuery == category.code }"
+              id="{{ category.code }}" role="tabpanel" aria-labelledby="pop1-tab" *ngFor="let category of portfolioCategories">
               <div class="pt-3"></div>
               <div *ngIf="category.list">
                 <div class="row portfolio no-space">
                   <div class="col-sm-4 col-md-4" *ngFor="let list of category.list">
-                      <div class="portfolio-container" *ngFor="let project of list.projects">
-                        <img src="{{ project.img }}" alt="Avatar" class="image">
-                        <div class="overlay">
-                          <div class="text"><a routerLink="/portfolio-details" [queryParams]="{ code: list.code }"> {{ list.name }}</a></div>
-                        </div>
+                    <div class="portfolio-container" *ngFor="let project of list.projects">
+                      <img src="{{ project.img }}" alt="Avatar" class="image">
+                      <div class="overlay">
+                        <div class="text"><a routerLink="/portfolio-details" [queryParams]="{ code: list.code }"> {{
+                            list.name }}</a></div>
                       </div>
-                      <!-- /.box-image -->
                     </div>
+                    <!-- /.box-image -->
+                  </div>
                 </div>
               </div>
             </div>
@@ -116,3 +120,13 @@
   <!-- /.bar -->
 </div>
 <!-- /#content -->
+
+<div id="content">
+  <div class="container">
+    <div class="row bar">
+      <div class="col-md-12 text-center">
+        <img src="assets/img/coming-soon.png" alt="" srcset="">
+      </div>
+    </div>
+  </div>
+</div>

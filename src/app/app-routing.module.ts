@@ -17,6 +17,12 @@ import { VideoListComponent } from './video-list/video-list.component';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 
+import { ProductModule } from './product/product.module';
+import { ProductDetailsModule } from './product-details/product-details.module';
+import { ServiceModule } from './service/service.module';
+import { ServiceDetailsModule } from './service-details/service-details.module';
+import { PortfolioModule } from './portfolio/portfolio.module';
+import { PortfolioDetailsModule } from './portfolio-details/portfolio-details.module';
 // const routes: Routes = [
 //   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
 //   { path: 'dashboard', component: DashboardComponent},
@@ -32,12 +38,12 @@ const appRoutes: Routes = [
       { path: '', component: DashboardComponent },
       { path: 'about-us', component: AboutUsComponent },
       { path: 'contact-us', component: ContactUsComponent },
-      { path: 'products', loadChildren: './product/product.module#ProductModule' },
-      { path: 'product-details', loadChildren: './product-details/product-details.module#ProductDetailsModule' },
-      { path: 'services', loadChildren: './service/service.module#ServiceModule' },
-      { path: 'service-details', loadChildren: './service-details/service-details.module#ServiceDetailsModule' },
-      { path: 'portfolio', loadChildren: './portfolio/portfolio.module#PortfolioModule' },
-      { path: 'portfolio-details', loadChildren: './portfolio-details/portfolio-details.module#PortfolioDetailsModule' },
+      { path: 'products', loadChildren: () => ProductModule },
+      { path: 'product-details', loadChildren: () => ProductDetailsModule },
+      { path: 'services', loadChildren: () => ServiceModule },
+      { path: 'service-details', loadChildren: () => ServiceDetailsModule },
+      { path: 'portfolio', loadChildren: () => PortfolioModule },
+      { path: 'portfolio-details', loadChildren: () => PortfolioDetailsModule },
       { path: 'support', component: SupportComponent },
       { path: 'faq', component: FaqComponent },
       { path: 'news', component: NewsComponent }, 
